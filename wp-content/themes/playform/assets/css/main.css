@@ -1533,3 +1533,8 @@ ul.guide__facts { display: inline-flex; flex-wrap: wrap; align-items: center; ma
 .topbar__tag { border-color: rgba(74, 51, 34, .3); color: var(--roast); }
 .topbar__mob, .topbar__mob a { color: #6A5543; }
 .topbar__mob .topbar__tag:hover { color: var(--roast); }
+
+/* Koffee: knækket, varm hvid baggrund (som Outdoorlands #FAFAF6), og grå flader trukket en anelse mod beige,
+   så de ikke ser kolde ud på den varme baggrund. Kort, søgefelt og menuer forbliver hvide. */
+:root { --soft: #F4F0EA; --img: #F2EEE8; --tile: #ECE6DE; }
+body { background: #FCFAF7; }
