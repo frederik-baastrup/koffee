@@ -156,7 +156,7 @@ final class Config {
 			'\bguide\b|opskriftsbog|kogebog|\bbog\b|bøger',
 			'salt ?(og|&) ?peber|saltkværn|peberkværn|krydderikværn|krydderimølle|muskatnød',
 			'tekande|te ?kande|teæg|tebrygger|matcha|te ?si\b|tesi\b',
-			'espresso ?martini|cocktail|shaker|vinglas|ølglas|moscow ?mule|tevarmer|doseringstragt|dosertragt|flaskeholder|låg til|coravin|vitamix|krydderiblanding|krydderi\b|vandflaske|drikkeflaske|mini shot|shot ?krus|skænkeprop|hældetud|\bpourer\b|doseringsmål|\bjigger\b|spiritus|whisky|gin ?glas',
+			'espresso ?martini|cocktail|shaker|vinglas|ølglas|moscow ?mule|tevarmer|bottle ?pilot|vaskemaskine|opvaskemaskine|hakker til|kødhakker|flaskerens|til flasker?\b|doseringstragt|dosertragt|flaskeholder|låg til|coravin|vitamix|krydderiblanding|krydderi\b|vandflaske|drikkeflaske|mini shot|shot ?krus|skænkeprop|hældetud|\bpourer\b|doseringsmål|\bjigger\b|spiritus|whisky|gin ?glas',
 			'gulvtæppe|\btæppe|plaid|forklæde|viskestykke|\bt-shirt\b|hættetrøje|kasket',
 		];
 	}
