@@ -4,6 +4,10 @@ name: Tjek sitet
 # status, omdirigeringer, robots og tema – så man kan se, om sitet virker, uden at være logget ind.
 on:
   workflow_dispatch:
+    inputs:
+      domain:
+        description: 'Domæne (tomt = koffee.dk)'
+        required: false
 
 jobs:
   check:
@@ -11,7 +15,7 @@ jobs:
     steps:
       - name: Tjek sider
         env:
-          DOMAIN: koffee.dk
+          DOMAIN: ${{ inputs.domain || 'koffee.dk' }}
         run: |
           B="https://$DOMAIN"
           for p in / /bedste-kaffemaskine/ /elektrisk-kaffekvaern/ /espressomaskiner/ /espressomaskiner/fuldautomatisk-espressomaskine/ /er-kaffe-sundt/ /koebsguide/ /viden/ /robots.txt /wp-sitemap.xml /sitemap_index.xml /saadan-fungerer-det/; do
@@ -21,6 +25,8 @@ jobs:
             prods=$(grep -o '[0-9.]* produkter' body.html | head -1)
             echo "$p → $out | $theme | $robots | $prods"
           done
+          echo "--- wp-admin kæde"; curl -s -I --max-redirs 5 -L "$B/wp-admin/" | grep -i '^HTTP\|^location\|^set-cookie: wordpress_test' 
+          echo "--- forside kæde"; curl -s -I --max-redirs 5 -L "$B/" | grep -i '^HTTP\|^location'
           echo "--- robots.txt"; curl -s "$B/robots.txt"
           echo "--- www → "; curl -s -o /dev/null -w "%{http_code} %{redirect_url}\n" "https://www.$DOMAIN/"
           echo "--- http → "; curl -s -o /dev/null -w "%{http_code} %{redirect_url}\n" "http://$DOMAIN/"
