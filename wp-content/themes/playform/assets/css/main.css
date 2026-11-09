@@ -1499,3 +1499,37 @@ ul.guide__facts { display: inline-flex; flex-wrap: wrap; align-items: center; ma
 .guide__basis { display: flex; align-items: flex-start; gap: 6px; margin: 12px 0 0; font-size: 12px; line-height: 1.45; color: var(--muted-2); }
 .guide__basis svg { flex: none; margin-top: 1px; width: 13px; height: 13px; opacity: .8; }
 .guide__basis a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Koffee: varme kaffenuancer i toppen (ejerens ønske 9. nov. 2026, som Outdoorlands grønne).
+   Headeren får en meget lys, varm cremefarve, topbaren en anelse mørkere, og kampagnebaren mørk espressobrun. */
+:root { --header-bg: #F5EEE6; --espresso: #2A1C11; --roast: #4A3322; --crema: #C9A27A; }
+.site-header { background: var(--header-bg); border-bottom-color: #E6DACB; }
+.site-header .search { background: #fff; border-color: #E0D3C3; }
+.site-header__row::before { border-top-color: #E6DACB !important; }
+
+.campaign-bar { background: var(--espresso); }
+.campaign-bar__track, .campaign-bar__track:hover, .campaign-bar__track:focus { color: #EADFD2; }
+.campaign-bar__item i { background: var(--crema); }
+.campaign-bar__btn { background: var(--accent); color: #fff; }
+.campaign-bar__btn:hover, .campaign-bar__btn:focus-visible { background: var(--accent-hover); color: #fff; }
+
+/* Menuen: mørkebrune links med brun understregning og hover. */
+.mm__link { color: var(--roast); transition: color .2s ease; }
+.mm__link::after { height: 3px; border-radius: 3px 3px 0 0; background: var(--accent); }
+.mm__item:hover > .mm__link, .mm__item:focus-within > .mm__link, .mm__link.is-active { color: var(--accent); }
+.mm__link--sale, .mm__item:hover > .mm__link--sale { color: var(--sale); }
+.mm__link--sale::after { background: var(--sale); }
+.knowledge a:not(.knowledge__sale) { color: var(--roast); transition: color .2s ease; }
+.knowledge a:not(.knowledge__sale):hover { color: var(--accent); }
+.mm__title { color: var(--accent); }
+
+/* Lys topbar, en anelse mørkere end headeren. */
+.topbar { background: #EBE0D3; color: #6A5543; border-bottom: 1px solid #E0D3C3; }
+.topbar b { color: var(--roast); }
+.topbar svg { color: var(--roast); }
+.topbar__usp li + li { border-left-color: rgba(74, 51, 34, .16); }
+.topbar__ad { color: #6A5543; }
+.topbar__ad:hover { color: var(--roast); }
+.topbar__tag { border-color: rgba(74, 51, 34, .3); color: var(--roast); }
+.topbar__mob, .topbar__mob a { color: #6A5543; }
+.topbar__mob .topbar__tag:hover { color: var(--roast); }
