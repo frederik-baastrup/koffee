@@ -29,7 +29,6 @@ jobs:
           echo "--- forside kæde"; curl -s -I --max-redirs 5 -L "$B/" | grep -i '^HTTP\|^location'
           for f in /wp-content/themes/playform/style.css /readme.html /wp-includes/images/w-logo-blue.png /wp-login.php; do echo "$f → $(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' --max-time 30 "$B$f")"; done
           echo "--- headers forside"; curl -s -I --max-time 30 "$B/" | grep -iv '^set-cookie\|^date\|^content-security'
-          echo "--- diag"; curl -s -i --max-time 30 "$B/?pf_diag=7c41" | grep -iv "^set-cookie\|^date"; echo "--- diag http"; curl -s -i --max-time 30 "http://$DOMAIN/?pf_diag=7c41" | grep -iv "^set-cookie\|^date"
           echo "--- robots.txt"; curl -s "$B/robots.txt"
           echo "--- www → "; curl -s -o /dev/null -w "%{http_code} %{redirect_url}\n" "https://www.$DOMAIN/"
           echo "--- http → "; curl -s -o /dev/null -w "%{http_code} %{redirect_url}\n" "http://$DOMAIN/"

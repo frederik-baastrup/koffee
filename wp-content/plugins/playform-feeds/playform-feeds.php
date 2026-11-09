@@ -22,20 +22,6 @@ if ( empty( $_SERVER['HTTPS'] ) || 'off' === strtolower( (string) $_SERVER['HTTP
 define( 'PLAYFORM_FEEDS_VERSION', '0.3.0' );
 define( 'PLAYFORM_FEEDS_DIR', __DIR__ );
 
-// Midlertidig fejlsøgning af omdirigeringsløkke 9. nov. 2026 (fjernes igen). Kun ikke-hemmelige indstillinger.
-if ( isset( $_GET['pf_diag'] ) && '7c41' === $_GET['pf_diag'] ) { // phpcs:ignore
-	header( 'Content-Type: text/plain; charset=utf-8' );
-	foreach ( [ 'HTTPS', 'SERVER_PORT', 'HTTP_X_FORWARDED_PROTO', 'HTTP_X_FORWARDED_SSL', 'HTTP_X_FORWARDED_PORT', 'REQUEST_SCHEME', 'HTTP_HOST' ] as $pf_k ) {
-		echo esc_html( $pf_k ), ' = ', esc_html( var_export( $_SERVER[ $pf_k ] ?? null, true ) ), "\n"; // phpcs:ignore
-	}
-	echo 'is_ssl = ', is_ssl() ? 'ja' : 'nej', "\n", 'FORCE_SSL_ADMIN = ', defined( 'FORCE_SSL_ADMIN' ) && FORCE_SSL_ADMIN ? 'ja' : 'nej', "\n";
-	foreach ( [ 'home', 'siteurl', 'template', 'stylesheet' ] as $pf_o ) {
-		echo esc_html( $pf_o ), ' = ', esc_html( (string) get_option( $pf_o ) ), "\n";
-	}
-	echo 'plugins = ', esc_html( implode( ', ', (array) get_option( 'active_plugins' ) ) ), "\n";
-	exit;
-}
-
 require_once __DIR__ . '/src/autoload.php';
 
 register_activation_hook( __FILE__, [ \Playform\Feeds\Install::class, 'activate' ] );
