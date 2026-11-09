@@ -18,11 +18,11 @@ jobs:
           DOMAIN: ${{ inputs.domain || 'koffee.dk' }}
         run: |
           B="https://$DOMAIN"
-          for p in / /bedste-kaffemaskine/ /elektrisk-kaffekvaern/ /espressomaskiner/ /espressomaskiner/fuldautomatisk-espressomaskine/ /er-kaffe-sundt/ /koebsguide/ /viden/ /robots.txt /wp-sitemap.xml /sitemap_index.xml /saadan-fungerer-det/; do
+          for p in / /bedste-kaffemaskine/ /elektrisk-kaffekvaern/ /espressomaskiner/ /espressomaskiner/fuldautomatisk-espressomaskine/ /er-kaffe-sundt/ /baalkaffe/ /kaffemaskiner/ /kaffekvaerne/manuel-kaffekvaern/ /espressokande/ /kaffevaegt/ /koebsguide/ /viden/ /robots.txt /wp-sitemap.xml /sitemap_index.xml /saadan-fungerer-det/; do
             out=$(curl -s -o body.html -w "%{http_code} %{redirect_url}" --max-time 60 "$B$p")
             theme=$(grep -o 'themes/[a-z0-9_-]*' body.html | head -1)
             robots=$(grep -o '<meta name=.robots.[^>]*>' body.html | head -1)
-            prods=$(grep -o '[0-9.]* produkter' body.html | head -1)
+            prods=$(grep -o '[0-9.]* produkter' body.html | head -1); picks=$(grep -o 'class="pick[ "]' body.html | wc -l); cards=$(grep -o 'data-product\|class="pcard\|class="product-card' body.html | wc -l); prods="$prods picks=$picks kort=$cards"
             echo "$p → $out | $theme | $robots | $prods"
           done
           echo "--- wp-admin kæde"; curl -s -I --max-redirs 5 -L "$B/wp-admin/" | grep -i '^HTTP\|^location\|^set-cookie: wordpress_test' 
