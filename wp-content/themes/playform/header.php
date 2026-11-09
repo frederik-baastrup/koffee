@@ -43,7 +43,7 @@ $pf_usps  = [
 	<div class="wrap">
 		<div class="site-header__row">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo" aria-label="<?php echo esc_attr( playform_site( 'name' ) ); ?> forside">
-				<img src="<?php echo esc_url( playform_asset( 'logo.svg' ) ); ?>" alt="<?php echo esc_attr( playform_site( 'name' ) ); ?>" width="146" height="46">
+				<img src="<?php echo esc_url( playform_asset( 'logo.svg' ) ); ?>" alt="<?php echo esc_attr( playform_site( 'name' ) ); ?>" width="147" height="32">
 			</a>
 			<nav id="hovedmenu" class="mm" aria-label="Kategorier">
 				<button type="button" class="mm__back" hidden><?php echo playform_icon( 'chevron', 16 ); // phpcs:ignore ?><span>Tilbage</span></button>

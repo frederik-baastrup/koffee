@@ -1,6 +1,6 @@
 <?php
 /**
- * Siden "Sådan vælger vi produkter" (metode for købsguides), skrevet til Pizzalicious.
+ * Siden "Sådan vælger vi produkter" (metode for købsguides), skrevet til kaffesitet.
  * Formuleringen er bevidst en anden end på søstersitesne.
  */
 
@@ -8,36 +8,36 @@ defined( 'ABSPATH' ) || exit;
 
 return [
 	'title'   => 'Sådan vælger vi produkter',
-	'excerpt' => 'Sådan udvælger vi pizzaovne, pizzasten, spader og andet pizzaudstyr til vores købsguides – og hvad vi ikke kan bedømme uden at have bagt med det.',
+	'excerpt' => 'Sådan finder vi frem til kaffemaskiner, espressomaskiner, kværne og andet kaffeudstyr til vores købsguides – og hvad vi ærligt ikke kan sige noget om uden at have brygget med det.',
 	'html'    => <<<'HTML'
-<p class="lead">Vi har ikke bagt pizza i de ovne, vi anbefaler. Derfor vil vi være helt åbne om, hvordan vi alligevel kommer frem til vores bud på de bedste pizzaovne, pizzasten og spader.</p>
+<p class="lead">Vi har ikke brygget kaffe på de maskiner, vi peger på i vores guides. Derfor lægger vi kortene på bordet: Her kan du læse, hvordan vi alligevel kommer frem til vores bud på de bedste kaffemaskiner, kværne og bryggeredskaber.</p>
 
-<h2>Hvad der skal være på plads</h2>
+<h2>Krav til et produkt i en guide</h2>
 <ul>
-<li>Produktet findes hos en af <a href="/vores-butikker/">de danske webshops, vi samarbejder med</a>. Vi sammenligner altså ikke alt, hvad der findes, men det, vores butikker har.</li>
-<li>Det var på lager og havde billede, da vi skrev guiden. Prisen og lagerstatus holder vi derefter opdateret automatisk to gange om dagen.</li>
-<li>Det passer til emnet – en guide til gasovne viser ikke træpilleovne.</li>
-<li>Vi tager højst fem modeller med pr. guide.</li>
+<li>Det sælges af en af <a href="/vores-butikker/">de butikker, vi samarbejder med</a>. Vi sammenligner altså det, vores partnerbutikker har – ikke hele markedet.</li>
+<li>Det var på lager og havde et produktbillede, da guiden blev skrevet. Derefter opdateres pris og lagerstatus automatisk morgen og aften.</li>
+<li>Det hører til emnet. En guide til manuelle kværne viser ikke elektriske, og en guide til filterkaffemaskiner viser ikke kapselmaskiner.</li>
+<li>Hver guide har højst fem modeller.</li>
 </ul>
 
-<h2>Hvad vi kigger på</h2>
-<p><strong>Det, der gør en forskel for pizzaen.</strong> For pizzaovne er det brændstof, størrelsen på bagefladen (12" eller 16"), hvor varm ovnen kan blive, og om den er nem at flytte. For pizzasten og bagestål er det materiale, tykkelse og størrelse i forhold til din ovn eller grill. For spader er det materiale, størrelse og om bladet er perforeret. Modellen, der rammer de vigtigste behov bedst, bliver vores førstevalg.</p>
-<p><strong>Pris i forhold til indhold.</strong> Kan en billigere model næsten det samme, bliver den vores bud til prisen.</p>
-<p><strong>Mærke og garanti.</strong> Producenter, der er kendt for netop pizzaudstyr, og en længere garanti tæller med, når resten står lige.</p>
-<p><strong>Hvem den passer til.</strong> Den bedste ovn til en stor have er ikke nødvendigvis den bedste til en altan. Derfor står der ved hvert valg, hvem det passer til, og hvem det ikke passer til.</p>
+<h2>Det lægger vi vægt på</h2>
+<p><strong>Det, der påvirker koppen.</strong> For espressomaskiner ser vi på, om der er portafilter eller fuld automatik, om der er indbygget kværn, og hvordan maskinen klarer mælk. For filterkaffemaskiner er det kapacitet, kande (glas eller termo) og om den kan brygge små mængder. For kværne er det formalingstype, hvor fint den kan justeres, og om den er beregnet til filter, espresso eller begge dele. Den model, der dækker de vigtigste behov bedst, bliver vores førstevalg.</p>
+<p><strong>Hvad du får for pengene.</strong> Kan en billigere model stort set det samme, bliver den vores bud til den mindre pengepung.</p>
+<p><strong>Producent og garanti.</strong> Mærker med et godt ry inden for kaffeudstyr og en lang garanti trækker op, når resten står lige.</p>
+<p><strong>Hvem den er til.</strong> Den bedste maskine til en familie, der drikker en hel kande om morgenen, er sjældent den bedste til én, der vil have en enkelt cortado. Derfor skriver vi ved hvert valg, hvem det passer til – og hvem der bør kigge efter noget andet.</p>
 
-<h2>Anmeldelser fra andre</h2>
-<p>Har et uafhængigt medie anmeldt præcis den model, linker vi til anmeldelsen, og den vægter højt. Ellers står der "Vores vurdering", så det er tydeligt, at valget bygger på produktdata.</p>
+<h2>Når andre har anmeldt modellen</h2>
+<p>Har et uafhængigt medie anmeldt præcis den samme model, linker vi til anmeldelsen, og den vejer tungt i vores valg. Findes der ingen, står der "Vores vurdering", så du kan se, at valget bygger på produktdata og ikke på en anmeldelse.</p>
 
-<h2>Hvad der ikke påvirker valget</h2>
-<p>Provision, hvilken butik der har varen, og betaling for at blive nævnt. Man kan ikke købe sig til en plads i vores guides. Se, <a href="/saadan-tjener-vi-penge/">hvordan vi tjener penge</a>.</p>
+<h2>Det kan ikke købes</h2>
+<p>Provision, hvilken butik der sælger varen, og betaling for omtale har ingen indflydelse på, hvad der kommer med. Ingen kan betale sig til en plads i vores guides. Læs, <a href="/saadan-tjener-vi-penge/">hvordan vi tjener penge</a>.</p>
 
-<h2>Vi bruger AI</h2>
-<p>Vores guides og produkttekster laves med hjælp fra AI. Den læser butikkernes produktoplysninger, leder efter anmeldelser af netop den model og skriver et udkast. Den må ikke digte egenskaber, og før en tekst udgives, tjekkes det automatisk, at alle tal står i butikkens data. Frederik Baastrup er ansvarlig redaktør – skriv endelig, hvis du finder en fejl.</p>
+<h2>Sådan bruger vi AI</h2>
+<p>Guides og produkttekster bliver til med hjælp fra AI. Den gennemgår butikkernes produktdata, søger efter anmeldelser af den konkrete model og skriver et udkast. Den må ikke finde på egenskaber, og inden en tekst udgives, bliver det automatisk kontrolleret, at alle tal findes i butikkens data. Frederik Baastrup er ansvarlig redaktør – sig endelig til, hvis du ser en fejl.</p>
 
-<h2>Det kan vi ikke vurdere</h2>
-<p>Om ovnen holder varmen jævnt, hvor hurtigt stenen bliver varm igen mellem to pizzaer, og hvordan lakken ser ud efter en vinter udenfor – det kræver, at man har brugt den. Læs gerne andres erfaringer, og tjek den endelige pris og leveringstid hos butikken.</p>
+<h2>Det kan vi ikke svare på</h2>
+<p>Hvordan espressoen smager efter et halvt år, hvor stabil temperaturen er fra kop til kop, og hvor meget kværnen larmer klokken seks om morgenen – det kræver, at man har haft maskinen i brug. Læs gerne andres erfaringer, og tjek den endelige pris og leveringstid hos butikken.</p>
 
-<p>Har du bagt med en af modellerne og oplevet noget andet, eller mangler vi en god ovn? Skriv endelig til os.</p>
+<p>Har du brygget med en af modellerne og oplevet noget andet, eller savner du en god maskine i en af guiderne? Så hører vi gerne fra dig.</p>
 HTML,
 ];

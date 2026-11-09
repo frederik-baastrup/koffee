@@ -130,70 +130,78 @@ function playform_category_thumb( string $slug ): string {
  */
 function playform_menu_spec(): array {
 	return [
-		[ 'pizzaovne', null ],
-		[ 'pizzasten', null ],
-		[ 'pizzaspader', null ],
-		[ 'pizzaskaerere', null ],
-		[ 'dej', null ],
-		[ 'tilbehoer', null ],
-		[ 'ingredienser', null ],
+		[ 'kaffemaskiner', null ],
+		[ 'espressomaskiner', null ],
+		[ 'kaffekvaerne', null ],
+		[ 'kaffebrygning', null ],
+		[ 'maelkeskummere', null ],
+		[ 'kopper-termo', null ],
+		[ 'baristaudstyr', null ],
+		[ 'kaffe', null ],
 	];
 }
 
-/** Visningsnavne fra menuen (fx "Romaskiner" for kategorien "Romaskine"), slug => navn. */
+/** Visningsnavne fra menuen (fx "Kaffekværne" for kategorien "Kaffekværn"), slug => navn. */
 function playform_menu_labels(): array {
-	// Kategorierne hedder ental (som folk søger), men i menu, faner og "Tilbud på …" læser flertal bedst.
+	// Underkategorierne hedder ental (som folk søger), men i menu, faner og "Tilbud på …" læser flertal bedst.
 	$out = [
 		// Hovedkategorier: korte navne i topmenuen.
-		'pizzaovne'          => 'Pizzaovne',
-		'pizzasten'          => 'Pizzasten & bagestål',
-		'pizzaspader'        => 'Pizzaspader',
-		'pizzaskaerere'      => 'Pizzaskærere',
-		'pizzahjul'          => 'Pizzahjul',
-		'vippekniv'          => 'Vippeknive',
-		'pizzasaks'          => 'Pizzasakse',
-		'pizzaknive'         => 'Pizzaknive',
-		'ooni-pizzaovn'      => 'Ooni pizzaovne',
-		'witt-pizzaovn'      => 'Witt pizzaovne',
-		'roterende-pizzaovn' => 'Roterende pizzaovne',
-		'pizzaovn-16-tommer' => 'Pizzaovne 16"',
-		'pizzaovn-12-tommer' => 'Pizzaovne 12"',
-		'pizzastaal'         => 'Pizzastål',
-		'pizzasten-til-grill' => 'Pizzasten til grill',
-		'rund-pizzasten'     => 'Runde pizzasten',
-		'perforeret-pizzaspade' => 'Perforerede pizzaspader',
-		'pizzaspade-aluminium' => 'Pizzaspader i aluminium',
-		'pizzaspade-trae'    => 'Pizzaspader i træ',
-		'pizzavender'        => 'Pizzavendere',
-		'pizzaspade-12-tommer' => 'Pizzaspader 12"',
-		'pizzaspade-14-tommer' => 'Pizzaspader 14"',
-		'pizzakit'           => 'Pizzakit & pizzasæt',
-		'pizzatermometer'    => 'Pizzatermometre',
-		'overtraek-til-pizzaovn' => 'Overtræk til pizzaovn',
-		'bord-til-pizzaovn'  => 'Borde til pizzaovn',
-		'pizzabraet'         => 'Pizzabrætter',
-		'dejskraber'         => 'Dejskrabere',
-		'steamer-til-pizzaovn' => 'Steamere til pizzaovn',
-		'haevekurv'          => 'Hævekurve',
-		'dejdeler'           => 'Dejdelere',
-		'pizzasalami'        => 'Salami & pølser',
-		'hot-sauce'          => 'Hot sauce & chili',
-		'dej'                => 'Dej & æltning',
-		'tilbehoer'          => 'Tilbehør',
-		'ingredienser'       => 'Ingredienser',
+		'kaffemaskiner'    => 'Kaffemaskiner',
+		'espressomaskiner' => 'Espressomaskiner',
+		'kaffekvaerne'     => 'Kaffekværne',
+		'kaffebrygning'    => 'Kaffebrygning',
+		'maelkeskummere'   => 'Mælkeskummere',
+		'kopper-termo'     => 'Kopper & termo',
+		'baristaudstyr'    => 'Baristaudstyr',
+		'kaffe'            => 'Kaffe & bønner',
 		// Underkategorier i flertal.
-		'gas-pizzaovn'       => 'Gas pizzaovne',
-		'pizzaovn-traepiller' => 'Pizzaovne til træpiller',
-		'pizzaovn-til-koekkenet' => 'Pizzaovne til køkkenet',
-		'elektrisk-pizzaovn' => 'Elektriske pizzaovne',
-		'pizzaovn-til-grill' => 'Pizzaovne til grill',
-		'pizzasten-sten'     => 'Pizzasten',
-		'bagestaal'          => 'Bagestål',
-		'pizzapande'         => 'Pizzapander & -forme',
-		'aeltemaskine'       => 'Æltemaskiner',
-		'dejkasse'           => 'Dejkasser',
-		'pizzamel'           => 'Pizzamel',
-		'tomater'            => 'Tomater & pizzasauce',
+		'filterkaffemaskine'          => 'Filterkaffemaskiner',
+		'kaffemaskine-med-kvaern'     => 'Kaffemaskiner med kværn',
+		'kaffemaskine-med-termokande' => 'Kaffemaskiner med termokande',
+		'moccamaster'                 => 'Moccamaster',
+		'kapselmaskine'               => 'Kapselmaskiner',
+		'kaffemaskine-til-1-kop'      => 'Kaffemaskiner til 1 kop',
+		'fuldautomatisk-espressomaskine' => 'Fuldautomatiske espressomaskiner',
+		'semiautomatisk-espressomaskine' => 'Semiautomatiske espressomaskiner',
+		'espressomaskine-med-kvaern'  => 'Espressomaskiner med kværn',
+		'manuel-espressomaskine'      => 'Manuelle espressomaskiner',
+		'sage-espressomaskine'        => 'Sage espressomaskiner',
+		'delonghi-espressomaskine'    => "De'Longhi espressomaskiner",
+		'espressomaskine-med-maelkeskummer' => 'Espressomaskiner med mælkeskummer',
+		'elektrisk-kaffekvaern'       => 'Elektriske kaffekværne',
+		'manuel-kaffekvaern'          => 'Manuelle kaffekværne',
+		'espressokvaern'              => 'Espressokværne',
+		'pour-over'                   => 'Pour over',
+		'stempelkande'                => 'Stempelkander',
+		'espressokande'               => 'Espressokander',
+		'aeropress'                   => 'Aeropress',
+		'cold-brew'                   => 'Cold brew',
+		'kaffefilter'                 => 'Kaffefiltre',
+		'kedel-til-kaffe'             => 'Kedler til kaffe',
+		'kaffekande'                  => 'Kaffekander',
+		'elektrisk-maelkeskummer'     => 'Elektriske mælkeskummere',
+		'manuel-maelkeskummer'        => 'Manuelle mælkeskummere',
+		'maelkekande'                 => 'Mælkekander',
+		'espressokopper'              => 'Espressokopper',
+		'cappuccinokopper'            => 'Cappuccino- og lattekopper',
+		'kaffekrus'                   => 'Kaffekrus',
+		'termokande'                  => 'Termokander',
+		'termokrus'                   => 'Termokrus',
+		'termoflaske'                 => 'Termoflasker',
+		'tamper'                      => 'Tampere',
+		'portafilter'                 => 'Portafiltre',
+		'kaffevaegt'                  => 'Kaffevægte',
+		'knock-box'                   => 'Knock boxes',
+		'afkalkning'                  => 'Afkalkning og rengøring',
+		'kaffedaase'                  => 'Kaffedåser',
+		'wdt-og-dosering'             => 'WDT og dosering',
+		'hele-kaffeboenner'           => 'Hele kaffebønner',
+		'espressoboenner'             => 'Espressobønner',
+		'formalet-kaffe'              => 'Formalet kaffe',
+		'koffeinfri-kaffe'            => 'Koffeinfri kaffe',
+		'kaffeabonnement'             => 'Kaffeabonnementer',
+		'kaffekapsler'                => 'Kaffekapsler',
+		'oekologisk-kaffe'            => 'Økologisk kaffe',
 	];
 	foreach ( playform_menu_spec() as [ $slug, $cats ] ) {
 		if ( isset( playform_virtual_groups()[ $slug ] ) ) {
@@ -257,7 +265,7 @@ function playform_menu(): array {
 		}
 		if ( $cats === null ) {
 			$cats = array_map( static fn( $s ) => $s[1]['sub'], playform_sub_links( $slug ) );
-			// Ingen underkategorier (fx Pizzaskærere): vis kategorien selv, så menupanelet ikke står tomt.
+			// Ingen underkategorier med produkter: vis kategorien selv, så menupanelet ikke står tomt.
 			$cats = $cats ?: [ $slug ];
 		}
 		$primary = [];
@@ -299,7 +307,7 @@ function playform_menu(): array {
 /** Populære kategorier, der vises i søgefeltet, før man har skrevet noget. */
 function playform_search_shortcuts(): array {
 	$out = [];
-	foreach ( [ 'gas-pizzaovn', 'elektrisk-pizzaovn', 'pizzasten-sten', 'bagestaal', 'pizzaspader', 'pizzaskaerere', 'aeltemaskine', 'pizzamel' ] as $slug ) {
+	foreach ( [ 'fuldautomatisk-espressomaskine', 'semiautomatisk-espressomaskine', 'filterkaffemaskine', 'elektrisk-kaffekvaern', 'manuel-kaffekvaern', 'pour-over', 'elektrisk-maelkeskummer', 'hele-kaffeboenner' ] as $slug ) {
 		$t = get_term_by( 'slug', $slug, 'product_cat' );
 		if ( $t && $t->count > 0 ) {
 			$out[] = [ $t->name, get_term_link( $t ) ];
@@ -311,10 +319,10 @@ function playform_search_shortcuts(): array {
 /** "Populære" i sidefoden: [ visningsnavn, kategori-slug ]. */
 function playform_footer_popular(): array {
 	return [
-		[ 'Gas pizzaovne', 'gas-pizzaovn' ],
-		[ 'Elektriske pizzaovne', 'elektrisk-pizzaovn' ],
-		[ 'Pizzasten', 'pizzasten-sten' ],
-		[ 'Bagestål', 'bagestaal' ],
-		[ 'Pizzaspader', 'pizzaspader' ],
+		[ 'Fuldautomatiske espressomaskiner', 'fuldautomatisk-espressomaskine' ],
+		[ 'Filterkaffemaskiner', 'filterkaffemaskine' ],
+		[ 'Elektriske kaffekværne', 'elektrisk-kaffekvaern' ],
+		[ 'Mælkeskummere', 'maelkeskummere' ],
+		[ 'Hele kaffebønner', 'hele-kaffeboenner' ],
 	];
 }

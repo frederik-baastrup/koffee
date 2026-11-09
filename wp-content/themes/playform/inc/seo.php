@@ -97,7 +97,7 @@ add_filter(
 		} elseif ( is_404() ) {
 			$parts['title'] = 'Siden findes ikke';
 		}
-		$parts['site'] = ucfirst( (string) playform_site( 'domain' ) ); // fx "Pizzalicious.dk"
+		$parts['site'] = ucfirst( (string) playform_site( 'domain' ) ); // fx "Koffee.dk"
 		unset( $parts['tagline'] );
 		return $parts;
 	}
@@ -112,14 +112,14 @@ add_action(
 		}
 		$desc = '';
 		if ( is_front_page() ) {
-			$desc = 'Find pizzaovne, pizzasten, pizzaspader og alt til hjemmelavet pizza fra danske webshops. Se priser og tilbud side om side, og få hjælp i vores købsguides.';
+			$desc = 'Kaffemaskiner, espressomaskiner, kværne og baristaudstyr fra de butikker, vi samarbejder med. Sammenlign priser og tilbud, og find hjælp i vores købsguides.';
 		} elseif ( function_exists( 'playform_current_campaign' ) && playform_current_campaign() ) {
 			$desc = playform_campaign_page_text( playform_current_campaign() )['intro'];
 		} elseif ( playform_is_tilbud_page() ) {
 			$t    = get_queried_object();
-			$desc = sprintf( 'Tilbud på %s fra danske webshops lige nu – butikkernes egne nedsatte priser på én side. Du køber direkte hos butikken.', $t instanceof WP_Term ? mb_strtolower( playform_cat_label( $t ) ) : playform_site( 'niche' ) );
+			$desc = sprintf( 'Tilbud på %s fra vores partnerbutikker lige nu – butikkernes egne nedsatte priser på én side. Du køber direkte hos butikken.', $t instanceof WP_Term ? mb_strtolower( playform_cat_label( $t ) ) : playform_site( 'niche' ) );
 		} elseif ( is_tax( 'product_cat' ) ) {
-			$desc = wp_strip_all_tags( term_description() ) ?: sprintf( 'Se %s fra danske webshops samlet ét sted på %s. Sammenlign priser, se butikkernes tilbud og find den rigtige model.', mb_strtolower( playform_cat_label( get_queried_object() ) ), playform_site( 'name' ) );
+			$desc = wp_strip_all_tags( term_description() ) ?: sprintf( 'Se %s fra de butikker, vi samarbejder med, samlet på %s. Sammenlign priser, se butikkernes tilbud og find den rigtige model.', mb_strtolower( playform_cat_label( get_queried_object() ) ), playform_site( 'name' ) );
 		} elseif ( is_post_type_archive( 'product' ) ) {
 			$desc = sprintf( 'Alle produkter på %s: %s fra de danske webshops, vi samarbejder med. Priser og lager opdateres to gange i døgnet.', playform_site( 'name' ), playform_site( 'niche' ) );
 		} elseif ( is_singular( 'product' ) ) {
@@ -137,7 +137,7 @@ add_action(
 				$desc = ( mb_strlen( $desc ) + mb_strlen( $tail ) > 160 ? rtrim( mb_substr( $desc, 0, 157 - mb_strlen( $tail ) ), " ,.;:–-" ) . '…' : $desc ) . $tail;
 			}
 		} elseif ( is_home() ) {
-			$desc = 'Guides og viden om ' . playform_site( 'niche' ) . ': hvilken pizzaovn, sten eller spade passer til dig, og hvordan får du mest ud af den?';
+			$desc = 'Guides og viden om ' . playform_site( 'niche' ) . ': hvilken maskine, kværn eller bryggemetode passer til dig, og hvordan får du den bedste kop ud af den?';
 		} elseif ( is_category() ) {
 			$desc = wp_strip_all_tags( term_description() ) ?: single_cat_title( '', false ) . ': guides og artikler om ' . playform_site( 'niche' ) . ' på ' . playform_site( 'name' ) . '.';
 		} elseif ( is_page() ) {

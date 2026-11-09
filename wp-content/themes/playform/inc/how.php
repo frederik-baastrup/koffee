@@ -61,7 +61,7 @@ function playform_how_html(): string {
 	return <<<HTML
 <p class="lead">Hos $name kan du sammenligne $niche, men du kan ikke købe noget direkte hos os. Vi er ingen butik: Vi har intet lager, sælger ikke selv og importerer ingen varer. Hvert produkt på siden kommer fra en af de $shopsl, vi samarbejder med, og når du trykker på "Gå til butik", er det butikken, du handler med.</p>
 
-<h2 id="feeds">Hvor kommer pizzaovnene og tilbehøret fra?</h2>
+<h2 id="feeds">Hvor kommer kaffemaskinerne og udstyret fra?</h2>
 <p>Alle data kommer fra butikkerne selv. Hver butik laver et produktfeed – en fil med navn, pris, lagerstatus, billeder og beskrivelse af de varer, den vil markedsføre – og deler det via Partner-ads, som er et dansk affiliate-netværk. Hele idéen med feedet er, at sider som $name må vise produkterne.</p>
 <ul>
 <li>Kun butikker med et affiliate-program og et produktfeed, som har sagt ja til $name som partner, er med.</li>

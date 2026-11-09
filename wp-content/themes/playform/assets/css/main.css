@@ -1,4 +1,4 @@
-/* Pizzalicious (samme tema som Kitzhen og Fitbase) – samme udtryk som designet: hvid, sort, BDO Grotesk, afrundede hjørner, tynde streger. */
+/* Koffee (samme tema som Kitzhen og Fitbase) – samme udtryk som designet: hvid, sort, BDO Grotesk, afrundede hjørner, tynde streger. */
 :root {
 	--ink: #111111;
 	--ink-2: #3F3F3B;
@@ -9,8 +9,11 @@
 	--soft: #F4F4F1;
 	--img: #F1F1EE;
 	--tile: #EDECE8;
-	--accent: #CE2B37; /* Pizzalicious-rød fra logoet */
-	--on-accent: #FFFFFF;
+	--accent: #754B21; /* kaffebrun fra bønnen i logoet */
+	--accent-hover: #5E3B19; /* lidt mørkere til hover */
+	--accent-tint: rgba(117, 75, 33, 0.15); /* lys ring om prikker */
+	--accent-shadow: rgba(117, 75, 33, 0.22);
+	--on-accent: #FFFFFF; /* hvid tekst på den brune accent */
 	--sale: #B42318;
 	--ok: #1E9E4A;
 	--warn: #D97706;
@@ -624,7 +627,7 @@ a.usp__item:hover b { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Artikelheader: lille kicker, forfatter og fakta på én fin linje */
 .kicker { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 5px 10px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 11.5px; font-weight: 600; letter-spacing: .6px; text-transform: uppercase; color: var(--ink); }
-.kicker i { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(206,43,55,.15); }
+.kicker i { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-tint); }
 .guide__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; width: 100%; max-width: 860px; margin-top: 8px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted-2); }
 .guide__author { display: inline-flex; align-items: center; gap: 12px; }
 .guide__author > span { display: flex; flex-direction: column; gap: 2px; line-height: 1.2; }
@@ -654,7 +657,7 @@ a.usp__item:hover b { text-decoration: underline; text-underline-offset: 3px; }
 /* Viden & guides: fremhævet guide + gitter */
 .guides-index { padding-top: 48px; }
 .kicker--sm { padding: 4px 10px 3px 8px; font-size: 10.5px; }
-.kicker--sm i { width: 5px; height: 5px; box-shadow: 0 0 0 2px rgba(206,43,55,.15); }
+.kicker--sm i { width: 5px; height: 5px; box-shadow: 0 0 0 2px var(--accent-tint); }
 .gcard { display: flex; flex-direction: column; gap: 16px; }
 .gcard__img { display: block; aspect-ratio: 3 / 2; border-radius: var(--r-l); overflow: hidden; background: var(--tile); }
 .gcard__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
@@ -813,7 +816,7 @@ ul.guide__facts { display: inline-flex; flex-wrap: wrap; align-items: center; ma
 .guide__head .crumbs { margin-bottom: 4px; }
 .byline__txt b span { font-weight: 400; color: var(--muted-2); }
 .guide__cat { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--ink); }
-.guide__cat i { width: 6px; height: 6px; margin: 0 2px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(206,43,55,.15); }
+.guide__cat i { width: 6px; height: 6px; margin: 0 2px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-tint); }
 .guide__cat:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (min-width: 1081px) {
 	.guide__head { max-width: 1080px; }
@@ -1123,8 +1126,8 @@ ul.guide__facts { display: inline-flex; flex-wrap: wrap; align-items: center; ma
 @media (max-width: 760px) { .rel { margin: 24px 0 44px; padding-top: 18px; } .rel__title { font-size: 16px; margin-bottom: 12px; } .rel__col a { padding: 5px 11px; font-size: 13px; } }
 
 /* Købsknappen i accentfarven (fra logoet): den vigtigste handling skal skille sig ud fra resten af siden */
-.btn-shop { background: var(--accent); color: var(--on-accent); border: 0; box-shadow: 0 1px 0 rgba(0,0,0,.06), 0 6px 16px rgba(206,43,55,.22); }
-.btn-shop:hover, .btn-shop:focus-visible { background: #B3212C; color: var(--on-accent); }
+.btn-shop { background: var(--accent); color: var(--on-accent); border: 0; box-shadow: 0 1px 0 rgba(0,0,0,.06), 0 6px 16px var(--accent-shadow); }
+.btn-shop:hover, .btn-shop:focus-visible { background: var(--accent-hover); color: var(--on-accent); }
 .btn-shop svg { color: inherit; }
 
 /* Artikelhoved: kompakt og i samme skriftstørrelse */
@@ -1407,22 +1410,19 @@ ul.guide__facts { display: inline-flex; flex-wrap: wrap; align-items: center; ma
 .review-card__go { flex: 0 0 auto; color: #fff; opacity: .7; }
 @media (max-width: 640px) { .review-card { padding: 16px; gap: 12px; } .review-card__icon { width: 36px; height: 36px; } .review-card__body b { font-size: 15.5px; } .review-card__go { display: none; } }
 
-/* Pizzalicious: logoet er højt (badge + to linjer tekst), så det får mere højde end Kitzhens. */
-.logo img { height: 46px; }
-@media (max-width: 1080px) { .logo img { height: 40px; } }
-@media (max-width: 760px) { .logo img { height: 36px; } }
-.site-footer img[src*="logo-white"] { height: 52px; width: auto; }
+/* Koffee: logoet er bredt og lavt (bønne + ordmærke, ca. 4,6:1), så højden holdes lav og bredden følger med. */
+.logo img { height: 32px; width: auto; max-width: none; }
+@media (max-width: 1080px) { .logo img { height: 28px; } }
+@media (max-width: 760px) { .logo img { height: 26px; } }
+@media (max-width: 380px) { .logo img { height: 23px; } }
+.site-footer img[src*="logo-white"] { height: 34px; width: auto; }
+@media (max-width: 760px) { .site-footer img[src*="logo-white"] { height: 30px; } }
 
 /* Sådan fungerer … (inc/how.php) */
 .how .lead { font-size: 17px; line-height: 1.7; color: var(--ink); }
 .how h2 { margin-top: 36px; }
 .how .note { font-size: 13px; color: var(--ink-3, var(--ink-2)); }
 
-/* Pizzalicious: mere luft om det høje logo på mobil (ejerens ønske 5. nov. 2026). */
-@media (max-width: 1080px) {
-	.site-header__row { padding: 17px 0; }
-	.site-header.is-search-open .site-header__row { padding-bottom: 14px; }
-}
 
 /* Prisliste på mobil: én samlet, rolig liste – butik og lager til venstre, pris og en lille pil til højre. */
 @media (max-width: 760px) {

@@ -21,7 +21,7 @@ while ( have_posts() ) :
 		<?php endif; ?>
 		<?php if ( get_post_field( 'post_name' ) === PLAYFORM_HOW_SLUG ) : ?>
 			<div class="how"><?php echo playform_how_html(); // phpcs:ignore ?></div>
-			<p class="how__more">Vil du vide, hvordan pizzaudstyret i vores guides bliver udvalgt, så læs <a href="<?php echo esc_url( playform_method_url() ); ?>">Sådan vælger vi produkter</a>.</p>
+			<p class="how__more">Vil du vide, hvordan kaffeudstyret i vores guides bliver udvalgt, så læs <a href="<?php echo esc_url( playform_method_url() ); ?>">Sådan vælger vi produkter</a>.</p>
 		<?php endif; ?>
 	</article>
 	<?php

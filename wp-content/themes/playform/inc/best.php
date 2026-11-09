@@ -1,6 +1,6 @@
 <?php
 /**
- * Købsguides af typen "Vores bud på de 3 bedste X" (Pizzalicious: omskrevet fra det gamle pizzalicious.dk).
+ * Købsguides af typen "Vores bud på de 3 bedste X" (omskrevet fra det gamle site).
  *
  * - Ligger på samme URL som på det gamle site: /romaskine-med-vand/ (ikke /viden/…), så de beholder placeringer og links.
  * - Indholdet er almindelig tekst i indlægget. Kun de levende dele (pris, butik, lager, knap) kommer fra shortcodes,
@@ -398,32 +398,24 @@ add_filter(
 );
 
 /**
- * Gamle adresser fra det tidligere pizzalicious.dk, der ikke findes mere: sti => ny adresse (301) eller 410 (fjernet).
- * Guides fik "bedste-" foran og mistede "-test" (samme valg som på Kitzhen). Artiklerne beholder deres adresser
- * (de importeres 1:1, se playform_import_legacy_posts()), så de står ikke her.
+ * Gamle adresser fra det tidligere koffee.dk, der ikke findes mere: sti => ny adresse (301) eller 410 (fjernet).
+ * Købsguiderne (content/best/) og artiklerne (content/legacy-posts.php, importeres 1:1) ligger på præcis de gamle
+ * adresser, så de står ikke her. /privatlivspolitik/ findes også på det nye site (standardside).
  */
 function playform_legacy_redirects(): array {
 	return [
-		// Købsguides (sitemap på det gamle site, 5. nov. 2026)
-		'bedste-pizzaovn-test'   => '/bedste-pizzaovn/',
-		'pizzaovn-til-koekkenet' => '/bedste-elektrisk-pizzaovn/',
-		'bedste-pizzastaal-test' => '/bedste-pizzastaal/',
-		'bedste-pizzaspade-test' => '/bedste-pizzaspade/',
-		'pizzahjul'              => '/bedste-pizzaskaerer/',
-		// Sider og kategorier fra det gamle site
-		'om-os'       => '/viden/forfatter/frederik-baastrup/',
+		// Sider fra det gamle site
+		'om-os'   => '/saadan-fungerer-det/',     // "Koffee.dk – Din guide til den bedste kaffe" (om siden)
+		'annonce' => '/saadan-tjener-vi-penge/', // annonceinformation
+		// Kategorier fra det gamle site
 		'inspiration' => '/viden/',
 		'guides'      => '/viden/',
 		'artikler'    => '/viden/',
 		'koebsguides' => '/koebsguide/',
-		'udstyr'      => '/tilbehoer/',
-		'annonce'     => '/saadan-tjener-vi-penge/',
 		'category/koebsguides' => '/koebsguide/',
 		'category/inspiration' => '/viden/',
 		'category/guides'      => '/viden/',
 		'category/artikler'    => '/viden/',
-		'category/pizzaovne'   => '/pizzaovne/',
-		'category/udstyr'      => '/tilbehoer/',
 		'category/annonce'     => '/viden/',
 		// Gamle sitemaps fra Yoast i Search Console
 		'sitemap_index.xml'    => '/wp-sitemap.xml',
@@ -561,7 +553,9 @@ function playform_best_kw( string $kw ): string {
 	$n = count( $w );
 	for ( $i = 0; $i < $n - 1; $i++ ) {
 		$l = mb_strtolower( $w[ $i ] );
-		if ( in_array( $l, [ 'flad', 'stor', 'lang', 'bred', 'tyk', 'tynd', 'høj', 'lav', 'let', 'billig', 'god', 'sort', 'hvid', 'rød' ], true ) ) {
+		if ( in_array( $l, [ 'manuel', 'enkel' ], true ) ) {
+			$w[ $i ] = 'manuel' === $l ? $w[ $i ] . 'le' : mb_substr( $w[ $i ], 0, -2 ) . 'le'; // manuelle, enkle
+		} elseif ( in_array( $l, [ 'flad', 'stor', 'lang', 'bred', 'tyk', 'tynd', 'høj', 'lav', 'let', 'billig', 'god', 'sort', 'hvid', 'rød' ], true ) ) {
 			$w[ $i ] .= ( 'let' === $l ? 'te' : 'e' );
 		} elseif ( preg_match( '/(sk|bar|lig|ig)$/u', $l ) ) {
 			$w[ $i ] .= 'e';

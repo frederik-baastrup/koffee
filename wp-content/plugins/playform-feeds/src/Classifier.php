@@ -23,7 +23,7 @@ final class Classifier {
 		if ( is_array( $map ) ) {
 			$mapped = $map[ $cat ] ?? 'exclude';
 			// 'refine': butikken sælger kun nichens varer – vores egne regler må placere varen mere præcist
-			// (fx en pizzasaks i butikkens "Andet pizzaudstyr"), ellers bruges butikkens kategori.
+			// (fx en tamper i butikkens "Andet kaffeudstyr"), ellers bruges butikkens kategori.
 			if ( 'exclude' !== $mapped && ! empty( $shop['refine'] ) ) {
 				return self::first_match( $match_name ) ?: $mapped;
 			}
@@ -43,7 +43,7 @@ final class Classifier {
 		if ( $found && in_array( $found, Config::machine_categories(), true ) && self::m( Config::accessory_pattern(), $name ) ) {
 			$found = Config::accessory_target();
 		}
-		// Mærker, der kun laver udstyr til nichen (fx Ooni til pizza): tilbehør uden kategoriord i navnet.
+		// Mærker, der kun laver udstyr til nichen (fx Espresso Tools til kaffe): tilbehør uden kategoriord i navnet.
 		if ( ! $found && $brand !== '' && method_exists( Config::class, 'brand_categories' ) ) {
 			$found = Config::brand_categories()[ $brand ] ?? null;
 		}

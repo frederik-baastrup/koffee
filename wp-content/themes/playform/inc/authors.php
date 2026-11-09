@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 function playform_author_defaults(): array {
 	return [
 		'role' => 'Stifter og redaktør',
-		'bio'  => sprintf( '%s drives af Frederik Baastrup, der samler %s fra danske webshops og skriver købsguides, så du kan holde ovne, priser og tilbud op mod hinanden, inden du køber.', playform_site( 'name' ), playform_site( 'niche' ) ),
+		'bio'  => sprintf( '%s drives af Frederik Baastrup, der samler %s fra de butikker, siden samarbejder med, og skriver købsguides, så du kan holde maskiner, kværne, priser og tilbud op mod hinanden, inden du køber.', playform_site( 'name' ), playform_site( 'niche' ) ),
 	];
 }
 
@@ -199,7 +199,7 @@ function playform_author_profile(): void {
 	foreach ( $users as $u ) {
 		$bio = trim( (string) get_user_meta( $u->ID, 'description', true ) );
 		if ( '' === $bio || playform_author_defaults()['bio'] === $bio || in_array( $bio, $old, true ) ) {
-			update_user_meta( $u->ID, 'description', sprintf( 'Frederik Baastrup har grundlagt %1$s og er redaktør på siden. Til hverdag arbejder han med webdesign og digitale løsninger i Mondae, som han driver. På %1$s samler han %2$s fra danske webshops og skriver købsguides, der gør det lettere at vælge pizzaovn, sten og tilbehør ud fra pris, specifikationer og tilbud. Han lægger åbent frem, hvordan produkterne er valgt, og hvordan siden tjener penge.', playform_site( 'name' ), playform_site( 'niche' ) ) );
+			update_user_meta( $u->ID, 'description', sprintf( 'Frederik Baastrup har grundlagt %1$s og er redaktør på siden. Til hverdag arbejder han med webdesign og digitale løsninger i Mondae, som han driver. På %1$s samler han %2$s fra de butikker, siden samarbejder med, og skriver købsguides, der gør det lettere at vælge kaffemaskine, kværn og bryggeudstyr ud fra pris, specifikationer og tilbud. Han lægger åbent frem, hvordan produkterne er valgt, og hvordan siden tjener penge.', playform_site( 'name' ), playform_site( 'niche' ) ) );
 		}
 		if ( '' === (string) get_user_meta( $u->ID, 'pf_photo', true ) ) {
 			update_user_meta( $u->ID, 'pf_photo', playform_asset( 'authors/frederik-baastrup.jpg' ) );

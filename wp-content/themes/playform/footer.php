@@ -4,8 +4,8 @@
 	<div class="wrap">
 		<div class="foot">
 			<div class="foot__about">
-				<img src="<?php echo esc_url( playform_asset( 'logo-white.svg' ) ); ?>" alt="<?php echo esc_attr( playform_site( 'name' ) ); ?>" width="146" height="46">
-				<p>Vi samler <?php echo esc_html( playform_site( 'niche' ) ); ?> fra danske webshops på ét sted, så du hurtigt finder det, du mangler.</p>
+				<img src="<?php echo esc_url( playform_asset( 'logo-white.svg' ) ); ?>" alt="<?php echo esc_attr( playform_site( 'name' ) ); ?>" width="156" height="34">
+				<p>Vi samler <?php echo esc_html( playform_site( 'niche' ) ); ?> fra de butikker, vi samarbejder med, så du kan finde den rette maskine, kværn eller kop uden at lede i timevis.</p>
 				<span><?php echo esc_html( playform_site( 'email' ) ); ?></span>
 			</div>
 			<div class="foot__col">

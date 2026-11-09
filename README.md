@@ -1,6 +1,6 @@
-# Pizzalicious
+# Koffee
 
-Pizzaovne og pizzaudstyr fra flere danske shops samlet ét sted (pizzalicious.dk). Samme kodebase som Kitzhen og Fitbase; nichen er sat op i `wp-content/plugins/playform-feeds/src/Config.php`. WordPress + WooCommerce med et eget importplugin og et eget tema.
+Kaffemaskiner, espressomaskiner, kværne og kaffeudstyr fra de butikker, vi samarbejder med (koffee.dk). Samme kodebase som Kitzhen og Fitbase; nichen er sat op i `wp-content/plugins/playform-feeds/src/Config.php`. WordPress + WooCommerce med et eget importplugin og et eget tema.
 
 ## Indhold
 
@@ -42,7 +42,7 @@ eller under **Værktøjer › Playform Feeds**.
 
 ```bash
 wp playform ai-classify                         # sorter produkter, reglerne ikke kunne placere
-wp playform ai-texts --category=lobebaand --limit=50   # skriv tekstudkast
+wp playform ai-texts --category=kaffekvaerne --limit=50   # skriv tekstudkast
 ```
 
 Tekster godkendes under **Produkter › Tekster til godkendelse** eller på det enkelte produkt. Der er et loft på 200 tekster pr. døgn (`playform_ai_daily_cap`). Sæt også en udgiftsgrænse i Claude Console.
@@ -56,7 +56,7 @@ Vælg Brevo eller MailerLite under **Værktøjer › Playform Feeds** og indsæt
 
 ## Guides
 
-`wp-content/themes/playform/content/guides.php` opretter de første fire guides som kladder: `wp eval-file wp-content/themes/playform/content/guides.php`. Produkter vises i guides med shortcoden `[playform_produkter kategori="gaabaand" antal="4"]`.
+`wp-content/themes/playform/content/guides.php` opretter de første fire guides som kladder: `wp eval-file wp-content/themes/playform/content/guides.php`. Produkter vises i guides med shortcoden `[playform_produkter kategori="manuel-kaffekvaern" antal="4"]`.
 
 ## Andre kommandoer
 

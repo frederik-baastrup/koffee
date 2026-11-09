@@ -29,9 +29,9 @@ function playform_front_products( string $which ): array {
 			$base['orderby'] = 'rand';
 			$base['tax_query'] = [ [ 'taxonomy' => 'product_cat', 'field' => 'slug', 'terms' => array_column( playform_menu_spec(), 0 ) ] ];
 		} else {
-			// "Populære": pizzaovne, sten og spader (størst kurv og kommission), blandet hver dag.
-			$base['tax_query']    = [ [ 'taxonomy' => 'product_cat', 'field' => 'slug', 'terms' => [ 'pizzaovne', 'pizzasten', 'pizzaspader' ] ] ];
-			$base['meta_query'][] = [ 'key' => '_price', 'value' => 200, 'compare' => '>=', 'type' => 'NUMERIC' ];
+			// "Populære": maskiner og kværne (størst kurv og kommission), blandet hver dag.
+			$base['tax_query']    = [ [ 'taxonomy' => 'product_cat', 'field' => 'slug', 'terms' => [ 'espressomaskiner', 'kaffemaskiner', 'kaffekvaerne' ] ] ];
+			$base['meta_query'][] = [ 'key' => '_price', 'value' => 500, 'compare' => '>=', 'type' => 'NUMERIC' ];
 			$base['orderby']      = 'rand';
 		}
 		$ids = get_posts( $base );
@@ -46,11 +46,11 @@ function playform_front_products( string $which ): array {
  */
 function playform_front_categories(): array {
 	return [
-		'gas-pizzaovn'       => [ 'Gas pizzaovne', 1500 ],
-		'elektrisk-pizzaovn' => [ 'Elektriske pizzaovne', 1000 ],
-		'pizzasten-sten'     => [ 'Pizzasten', 150 ],
-		'pizzaspader'        => [ 'Pizzaspader', 150 ],
-		'aeltemaskine'       => [ 'Æltemaskiner', 2000 ],
+		'fuldautomatisk-espressomaskine' => [ 'Fuldautomatiske espressomaskiner', 3000 ],
+		'semiautomatisk-espressomaskine' => [ 'Semiautomatiske espressomaskiner', 2000 ],
+		'filterkaffemaskine'             => [ 'Filterkaffemaskiner', 500 ],
+		'elektrisk-kaffekvaern'          => [ 'Elektriske kaffekværne', 700 ],
+		'maelkeskummere'                 => [ 'Mælkeskummere', 300 ],
 	];
 }
 
@@ -80,14 +80,14 @@ function playform_front_category_products( string $slug, int $min ): array {
 }
 
 $hero = [
-	[ 'slug' => 'pizzaovne', 'title' => 'Pizzaovne', 'big' => true, 'subs' => [ [ 'Gas pizzaovn', [ 'sub' => 'gas-pizzaovn' ] ], [ 'Elektrisk pizzaovn', [ 'sub' => 'elektrisk-pizzaovn' ] ], [ 'Pizzaovn til træpiller', [ 'sub' => 'pizzaovn-traepiller' ] ], [ 'Pizzaovn til køkkenet', [ 'sub' => 'pizzaovn-til-koekkenet' ] ], [ 'Pizzaovn til grill', [ 'sub' => 'pizzaovn-til-grill' ] ] ] ],
-	[ 'slug' => 'pizzasten', 'title' => 'Pizzasten & bagestål', 'subs' => [ [ 'Pizzasten', [ 'sub' => 'pizzasten-sten' ] ], [ 'Bagestål', [ 'sub' => 'bagestaal' ] ], [ 'Pizzapander', [ 'sub' => 'pizzapande' ] ] ] ],
-	[ 'slug' => 'pizzaspader', 'title' => 'Pizzaspader', 'subs' => [] ],
-	[ 'slug' => 'dej', 'title' => 'Dej & æltning', 'subs' => [ [ 'Æltemaskiner', [ 'sub' => 'aeltemaskine' ] ], [ 'Dejkasser', [ 'sub' => 'dejkasse' ] ] ] ],
+	[ 'slug' => 'espressomaskiner', 'title' => 'Espressomaskiner', 'big' => true, 'subs' => [ [ 'Fuldautomatisk espressomaskine', [ 'sub' => 'fuldautomatisk-espressomaskine' ] ], [ 'Semiautomatisk espressomaskine', [ 'sub' => 'semiautomatisk-espressomaskine' ] ], [ 'Espressomaskine med kværn', [ 'sub' => 'espressomaskine-med-kvaern' ] ], [ 'Manuel espressomaskine', [ 'sub' => 'manuel-espressomaskine' ] ], [ 'Espressomaskine med mælkeskummer', [ 'sub' => 'espressomaskine-med-maelkeskummer' ] ] ] ],
+	[ 'slug' => 'kaffemaskiner', 'title' => 'Kaffemaskiner', 'subs' => [ [ 'Filterkaffemaskine', [ 'sub' => 'filterkaffemaskine' ] ], [ 'Med kværn', [ 'sub' => 'kaffemaskine-med-kvaern' ] ], [ 'Kapselmaskine', [ 'sub' => 'kapselmaskine' ] ] ] ],
+	[ 'slug' => 'kaffekvaerne', 'title' => 'Kaffekværne', 'subs' => [ [ 'Elektrisk', [ 'sub' => 'elektrisk-kaffekvaern' ] ], [ 'Manuel', [ 'sub' => 'manuel-kaffekvaern' ] ], [ 'Espressokværn', [ 'sub' => 'espressokvaern' ] ] ] ],
+	[ 'slug' => 'kaffebrygning', 'title' => 'Kaffebrygning', 'subs' => [ [ 'Pour over', [ 'sub' => 'pour-over' ] ], [ 'Stempelkande', [ 'sub' => 'stempelkande' ] ], [ 'Espressokande', [ 'sub' => 'espressokande' ] ] ] ],
 ];
-// Desktop: det store kort til venstre og tre kort til højre. Mobil: karrusel med 6 kategorier – maskiner og grill først (størst kurv og kommission).
+// Desktop: det store kort til venstre og tre kort til højre. Mobil: karrusel med 6 kategorier – maskiner og kværne først (størst kurv og kommission).
 $mob = array_values( array_filter(
-	[ 'pizzaovne', 'pizzasten', 'pizzaspader', 'dej', 'tilbehoer', 'ingredienser' ],
+	[ 'espressomaskiner', 'kaffemaskiner', 'kaffekvaerne', 'kaffebrygning', 'maelkeskummere', 'baristaudstyr' ],
 	static function ( $c ) {
 		$t = get_term_by( 'slug', $c, 'product_cat' );
 		return $t && ( $t->count > 0 || get_term_children( $t->term_id, 'product_cat' ) );
@@ -111,7 +111,7 @@ $has_deals = count( $deals ) >= 4;
 ?>
 
 <section class="wrap hero-wrap">
-	<h1 class="screen-reader-text"><?php echo esc_html( playform_site( 'name' ) . ' – ' . playform_site( 'niche' ) . ' fra danske webshops samlet ét sted' ); ?></h1>
+	<h1 class="screen-reader-text"><?php echo esc_html( playform_site( 'name' ) . ' – ' . playform_site( 'niche' ) . ' fra de butikker, vi samarbejder med' ); ?></h1>
 	<div class="hero">
 		<?php foreach ( $hero as $i => $h ) : ?>
 			<?php if ( $i === 1 ) : ?><div class="hero__side"><?php endif; ?>
@@ -134,7 +134,7 @@ $has_deals = count( $deals ) >= 4;
 	</div>
 
 	<div class="usp">
-		<div class="usp__item"><span class="usp__icon"><?php echo playform_icon( 'grid', 22, 1.4 ); // phpcs:ignore ?></span><span><b>Alt til pizza</b><span>Ovne, sten og tilbehør fra flere shops</span></span></div>
+		<div class="usp__item"><span class="usp__icon"><?php echo playform_icon( 'grid', 22, 1.4 ); // phpcs:ignore ?></span><span><b>Fra bønne til kop</b><span>Maskiner, kværne og baristaudstyr</span></span></div>
 		<div class="usp__item"><span class="usp__icon"><?php echo playform_icon( 'refresh', 22, 1.4 ); // phpcs:ignore ?></span><span><b>Opdateret 2× dagligt</b><span>Friske priser og lagertal</span></span></div>
 		<div class="usp__item"><span class="usp__icon"><?php echo playform_icon( 'store', 22, 1.4 ); // phpcs:ignore ?></span><span><b>Handl hos webshoppen</b><span>Vi sender dig videre til butikken</span></span></div>
 		<a class="usp__item" href="<?php echo esc_url( playform_tilbud_url() ); ?>"><span class="usp__icon"><?php echo playform_icon( 'tag', 22, 1.4 ); // phpcs:ignore ?></span><span><b>Butikkernes tilbud</b><span>Se de nedsatte priser</span></span></a>
@@ -164,7 +164,7 @@ foreach ( playform_front_categories() as $cslug => [ $ctitle, $cmin ] ) {
 	<div class="news">
 		<div>
 			<h2>Få besked, når prisen falder</h2>
-			<p>Nye tilbud på <?php echo esc_html( playform_site( 'niche' ) ); ?>, købsguides og idéer til pizzaaftenen – højst omkring én mail om ugen.</p>
+			<p>Nye tilbud på <?php echo esc_html( playform_site( 'niche' ) ); ?>, købsguides og råd til en bedre kop kaffe – højst omkring én mail om ugen.</p>
 		</div>
 		<form class="news__form" method="post" action="#" data-newsletter data-endpoint="<?php echo esc_url( rest_url( 'playform/v1/newsletter' ) ); ?>">
 			<input type="text" name="website" tabindex="-1" autocomplete="off" class="sr-only" aria-hidden="true">
@@ -236,6 +236,6 @@ if ( $posts ) {
 
 <?php
 $front   = get_post( (int) get_option( 'page_on_front' ) );
-$seo     = $front && trim( $front->post_content ) ? apply_filters( 'the_content', $front->post_content ) : '<h2>Pizzaovne og pizzaudstyr fra danske webshops – samlet ét sted</h2><p>' . esc_html( playform_site( 'name' ) ) . ' er stedet for dig, der vil bage pizza derhjemme. Her finder du pizzaovne, pizzasten, pizzaspader, mel og meget mere fra en række danske webshops. Priser og lagerstatus bliver hentet morgen og aften, så du kan se, hvad ovnen koster i dag, og hvilken butik der har den på lager. Klik videre, og afslut købet hos butikken, som du plejer.</p><h3>Gas, træ eller el?</h3><p>Det første valg er brændslet. En gas pizzaovn er hurtig at tænde og nem at styre. En ovn til træ eller træpiller giver røgsmag og den klassiske oplevelse, men kræver lidt mere øvelse. En elektrisk pizzaovn kan stå i køkkenet og bruges hele året. Har du ikke plads til en pizzaovn, giver en pizzasten eller et bagestål en sprød bund i den almindelige ovn.</p><h3>Det skal du også bruge</h3><p>En pizzaspade til at sætte pizzaen ind og en mindre spade til at vende den, et infrarødt termometer til at måle stenens temperatur og en pizzaskærer. Til dejen er godt mel og tid vigtigere end udstyr – men en æltemaskine og et par dejkasser gør det nemmere at lave mange pizzaer på én gang.</p>';
+$seo     = $front && trim( $front->post_content ) ? apply_filters( 'the_content', $front->post_content ) : '<h2>Kaffemaskiner, kværne og kaffeudstyr fra de butikker, vi samarbejder med</h2><p>' . esc_html( playform_site( 'name' ) ) . ' er bygget til dig, der gerne vil have bedre kaffe derhjemme – uanset om morgenkoppen kommer fra en filtermaskine, en espressomaskine eller en dripper på køkkenbordet. Vi henter produkter, priser og lagerstatus fra de kaffe- og køkkenbutikker, vi samarbejder med, to gange i døgnet. Du får et samlet overblik her og gennemfører købet hos butikken, når du har fundet det rigtige.</p><h3>Hvilken slags kaffe drikker du?</h3><p>Det er det bedste sted at starte. Drikker husstanden mest almindelig sort kaffe, er en filterkaffemaskine eller en pour over-opsætning svær at slå. Holder du af cappuccino og latte, giver en espressomaskine med damplanse eller en fuldautomatisk maskine dig mælkeskum på knapper. Og vil du selv styre hver detalje i din espresso, er en semiautomatisk maskine med portafilter det oplagte valg.</p><h3>Kværnen gør en større forskel, end mange tror</h3><p>Friskmalede bønner smager mere end formalet kaffe, der har stået åben. En kværn med jævn formaling er derfor en af de investeringer, der løfter koppen mest – både til filter og espresso. Supplér med en kaffevægt, en svanehalskedel eller en mælkekande, og du har det, der skal til for at lave kaffe, du glæder dig til.</p>';
 get_template_part( 'template-parts/seo-text', null, [ 'html' => $seo, 'right' => true ] );
 get_footer();

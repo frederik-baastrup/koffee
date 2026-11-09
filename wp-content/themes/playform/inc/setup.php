@@ -245,7 +245,7 @@ function playform_run_upgrades(): void {
 	if ( class_exists( '\Playform\Feeds\Sales' ) ) {
 		\Playform\Feeds\Sales::refresh_all( current_time( 'Y-m-d' ) ); // kontrollerede førpriser
 	}
-	foreach ( [ 'playform_front_popular', 'playform_front_deals', 'playform_front_new', 'playform_price_ranges', 'playform_front_cat_gas-pizzaovn', 'playform_front_cat_elektrisk-pizzaovn', 'playform_front_cat_pizzasten-sten', 'playform_front_cat_pizzaspader', 'playform_front_cat_aeltemaskine' ] as $t ) {
+	foreach ( [ 'playform_front_popular', 'playform_front_deals', 'playform_front_new', 'playform_price_ranges', 'playform_front_cat_fuldautomatisk-espressomaskine', 'playform_front_cat_semiautomatisk-espressomaskine', 'playform_front_cat_filterkaffemaskine', 'playform_front_cat_elektrisk-kaffekvaern', 'playform_front_cat_maelkeskummere' ] as $t ) {
 		delete_transient( $t );
 	}
 	// Indlæg (guides) ligger direkte under roden: /bedste-gasgrill/ (samme adresser som det gamle site).
@@ -416,12 +416,12 @@ function playform_guide_topics(): void {
 		}
 	}
 	$texts = [
-		'Købsguides' => 'Vi gennemgår pizzaovne, pizzasten, pizzaspader og andet pizzaudstyr, peger på de modeller, vi synes er værd at kigge på, og forklarer, hvad du skal være opmærksom på.',
-		'Viden'      => 'Svar på de spørgsmål, der dukker op, når du laver pizza og bruger din pizzaovn.',
+		'Købsguides' => 'Vi sætter kaffemaskiner, espressomaskiner, kværne og bryggeudstyr op mod hinanden, fremhæver de modeller, vi mener er værd at kigge nærmere på, og forklarer, hvad du skal overveje, før du køber.',
+		'Viden'      => 'Råd og svar om kaffe: bønner, formaling, bryggemetoder og pasning af din maskine.',
 	];
 	foreach ( $texts as $name => $desc ) {
 		$t = get_term_by( 'name', $name, 'category' );
-		if ( $t && ( trim( $t->description ) === '' || ( 'Købsguides' === $name && trim( $t->description ) === 'Vores bud på de bedste modeller, og hvad du skal kigge efter, før du køber pizzaovn, pizzasten, pizzaspade og andet pizzaudstyr.' ) ) ) { // den gamle fælles formulering skiftes også
+		if ( $t && ( trim( $t->description ) === '' || ( 'Købsguides' === $name && str_starts_with( trim( $t->description ), 'Vores bud på de bedste modeller, og hvad du skal kigge efter, før du køber' ) ) ) ) { // den gamle fælles formulering skiftes også
 			wp_update_term( $t->term_id, 'category', [ 'description' => $desc ] );
 		}
 	}
@@ -488,9 +488,9 @@ function playform_default_text( string $which ): string {
 	$name  = playform_site( 'name' );
 	$niche = playform_site( 'niche' );
 	if ( $which === 'butikker' ) {
-		return '<p>' . "$name giver dig overblik over $niche fra flere danske webshops. Produkter, priser og lagerstatus henter vi hos butikkerne morgen og aften. Trykker du på \"Gå til butik\", lander du hos butikken og handler der som vanligt." . "</p><h2>Butikker på $name</h2>";
+		return '<p>' . "På $name kan du sammenligne $niche fra de butikker, vi samarbejder med. Pris og lager opdaterer vi fra butikkerne hver morgen og hver aften. Vælger du \"Gå til butik\", fortsætter du hos butikken, og det er dér, du lægger i kurven og betaler." . "</p><h2>Butikker på $name</h2>";
 	}
-	return '<p>' . "Du betaler ikke noget for at bruge $name. Vi får en lille provision fra butikken, når du klikker videre og køber noget – uden at det gør varen dyrere for dig. Du vælger selv, om produkterne skal sorteres efter pris, tilbud eller nyeste." . '</p><p>' . "Vi viser udelukkende butikkernes egne tilbud, og højst i 14 dage. Kender vi butikkens pris fra de 30 dage før tilbuddet, er førprisen den laveste pris i den periode. Ellers vises butikkens egen førpris, tydeligt markeret som butikkens. Se altid den endelige pris hos butikken, før du bestiller." . '</p>';
+	return '<p>' . "Det er gratis at bruge $name. Køber du noget efter at have klikket videre til en butik, sender butikken os en mindre provision – prisen er den samme for dig. Sortér selv efter pris, tilbud eller nyeste." . '</p><p>' . "Tilbud på siden er altid butikkernes egne, og de vises højst i 14 dage. Har vi fulgt prisen i de 30 dage før tilbuddet, bruger vi den laveste pris i perioden som førpris. Ellers står butikkens egen førpris, og den er mærket som butikkens. Tjek den endelige pris hos butikken, inden du bestiller." . '</p>';
 }
 
 /**
@@ -754,8 +754,6 @@ add_action(
  */
 function playform_renamed_categories(): array {
 	return [
-		'trae-pizzaovn'       => [ 'pizzaovn-traepiller', 'Pizzaovn til træpiller', 'Pizzaovne til træ og træpiller giver den klassiske røgsmag. Mange kan også bruges med gas. Se modeller fra flere danske webshops.' ],
-		'drikkevarekoeleskab' => [ 'vinkoeleskab', 'Vinkøleskab', 'Køleskabe til drikkevarer, vinkøleskabe og ølkølere. Se modeller fra flere danske webshops samlet ét sted.' ],
 	];
 }
 
@@ -774,7 +772,7 @@ function playform_rename_categories(): void {
 	}
 }
 
-// Gamle kategoriadresser (fx /kaffe-drikke/drikkevarekoeleskab/) → 301 til den nye adresse.
+// Gamle kategoriadresser (fx /gammel-forælder/gammel-slug/) → 301 til den nye adresse.
 add_action( 'template_redirect', function (): void {
 	$path = trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' );
 	if ( '' === $path ) {
@@ -827,23 +825,21 @@ function playform_fix_default_site_name(): void {
 }
 
 /* -------------------------------------------------------------------------
- * Artikler fra det gamle pizzalicious.dk (content/legacy-posts.php)
+ * Artikler fra det gamle koffee.dk (content/legacy-posts.php)
  * ---------------------------------------------------------------------- */
 
-const PLAYFORM_LEGACY_SOURCE = 'https://pizzalicious.dk';
-
 /**
- * Henter artiklerne 1:1 fra det gamle sites REST API: titel, tekst (med alle links), uddrag, dato og udvalgt billede.
- * Kun sidebyggerens koder ([vc_row] o.l.) fjernes – selve teksten røres ikke. Kører, indtil alle er hentet, og kun så
- * længe sitet ikke selv ligger på pizzalicious.dk (ellers ville vi hente fra os selv). En kopi gemmes i uploads.
+ * Opretter artiklerne fra det gamle koffee.dk 1:1 ud fra content/legacy-posts.php: samme adresse (slug), titel,
+ * tekst (med alle links), uddrag, dato og udvalgt billede. Det gamle site er offline, så alt ligger i repoet –
+ * billederne i assets/img/legacy/. Hver artikel oprettes én gang (findes adressen allerede, røres den ikke),
+ * højst $limit pr. kørsel; resten tages af en planlagt kørsel et par minutter senere. Status i option playform_legacy_posts.
  */
 function playform_import_legacy_posts( int $limit = 4 ): void {
 	$file = get_template_directory() . '/content/legacy-posts.php';
 	$list = is_readable( $file ) ? (array) require $file : [];
 	$done = (array) get_option( 'playform_legacy_posts', [] );
 	$todo = array_diff_key( $list, array_filter( $done, static fn( $v ) => 'ok' === $v ) );
-	$home = (string) wp_parse_url( (string) get_option( 'home' ), PHP_URL_HOST );
-	if ( ! $todo || str_ends_with( $home, (string) wp_parse_url( PLAYFORM_LEGACY_SOURCE, PHP_URL_HOST ) ) ) {
+	if ( ! $todo ) {
 		return;
 	}
 	require_once ABSPATH . 'wp-admin/includes/media.php';
@@ -854,39 +850,34 @@ function playform_import_legacy_posts( int $limit = 4 ): void {
 		wp_schedule_single_event( time() + 120, 'playform_legacy_posts' );
 	}
 	$author = get_users( [ 'role' => 'administrator', 'number' => 1, 'fields' => 'ID' ] );
+	$tz     = new DateTimeZone( 'Europe/Copenhagen' ); // datoerne i legacy-posts.php er dansk tid
+	$gmt    = static function ( string $local ) use ( $tz ): string {
+		return ( new DateTime( $local, $tz ) )->setTimezone( new DateTimeZone( 'UTC' ) )->format( 'Y-m-d H:i:s' );
+	};
 	foreach ( array_slice( $todo, 0, $limit, true ) as $slug => $opt ) {
-		$done[ $slug ] = 'fejl';
+		$done[ $slug ] = 'fejl'; // gemmes med det samme, så en artikel, der får kørslen til at gå ned, ikke blokerer resten
 		update_option( 'playform_legacy_posts', $done, false );
 		if ( get_posts( [ 'name' => $slug, 'post_type' => 'post', 'post_status' => 'any', 'numberposts' => 1, 'fields' => 'ids' ] ) ) {
 			$done[ $slug ] = 'ok';
 			update_option( 'playform_legacy_posts', $done, false );
 			continue;
 		}
-		$res = wp_remote_get( PLAYFORM_LEGACY_SOURCE . '/wp-json/wp/v2/posts?slug=' . rawurlencode( $slug ) . '&_embed=wp:featuredmedia', [ 'timeout' => 30 ] );
-		$arr = is_wp_error( $res ) ? null : json_decode( wp_remote_retrieve_body( $res ), true );
-		$p   = is_array( $arr ) ? ( $arr[0] ?? null ) : null;
-		if ( ! $p ) {
+		if ( empty( $opt['title'] ) || empty( $opt['html'] ) ) {
 			continue;
 		}
-		$up = wp_upload_dir();
-		wp_mkdir_p( $up['basedir'] . '/playform/legacy-posts' );
-		file_put_contents( $up['basedir'] . '/playform/legacy-posts/' . $slug . '.json', wp_json_encode( $p ) ); // phpcs:ignore
-
-		$html = (string) ( $p['content']['rendered'] ?? '' );
-		$html = preg_replace( '/\[\/?vc_[^\]]*\]/', '', $html );           // sidebyggerens koder
-		$html = preg_replace( '#<p>\s*</p>\s*#', '', $html );                 // tomme afsnit, de efterlod
 		$cat_name = ! empty( $opt['hidden'] ) ? 'Annonce' : 'Viden';
 		$cat      = term_exists( $cat_name, 'category' ) ?: wp_insert_term( $cat_name, 'category' );
+		$date     = (string) ( $opt['date'] ?? current_time( 'mysql' ) );
 		$id       = wp_insert_post(
 			[
 				'post_type'     => 'post',
 				'post_status'   => 'publish',
 				'post_name'     => $slug,
-				'post_title'    => html_entity_decode( (string) $p['title']['rendered'], ENT_QUOTES, 'UTF-8' ),
-				'post_excerpt'  => trim( html_entity_decode( wp_strip_all_tags( (string) $p['excerpt']['rendered'] ), ENT_QUOTES, 'UTF-8' ) ),
-				'post_content'  => trim( $html ),
-				'post_date'     => (string) $p['date'],
-				'post_date_gmt' => (string) $p['date_gmt'],
+				'post_title'    => (string) $opt['title'],
+				'post_excerpt'  => (string) ( $opt['excerpt'] ?? '' ),
+				'post_content'  => '', // teksten sættes nedenfor, når billederne er lagt i uploads
+				'post_date'     => $date,
+				'post_date_gmt' => $gmt( $date ),
 				'post_category' => is_wp_error( $cat ) ? [] : [ (int) ( is_array( $cat ) ? $cat['term_id'] : $cat ) ],
 				'post_author'   => $author ? (int) $author[0] : 1,
 			],
@@ -900,17 +891,56 @@ function playform_import_legacy_posts( int $limit = 4 ): void {
 			update_post_meta( $id, '_pf_hidden', 1 );
 			delete_transient( 'playform_hidden_posts' );
 		}
-		$img = (string) ( $p['_embedded']['wp:featuredmedia'][0]['source_url'] ?? '' );
-		if ( $img ) {
-			$tmp = download_url( $img, 30 );
-			if ( ! is_wp_error( $tmp ) ) {
-				$att = media_handle_sideload( [ 'name' => basename( (string) wp_parse_url( $img, PHP_URL_PATH ) ), 'tmp_name' => $tmp ], $id );
-				if ( ! is_wp_error( $att ) ) {
-					set_post_thumbnail( $id, $att );
-					update_post_meta( $id, '_pf_legacy_img', $img ); // playform_article_images() lader det være
+		if ( ! empty( $opt['sponsored'] ) ) {
+			update_post_meta( $id, '_pf_sponsored', 1 ); // mærket "Annonce" (synkroniseres også af init-krogen længere nede)
+		}
+		// Billederne (assets/img/legacy/) lægges i uploads; samme fil bruges kun én gang (fx udvalgt billede og billede i teksten).
+		$media = (array) get_option( 'playform_legacy_media', [] );
+		$att_for = static function ( string $name ) use ( $id, &$media ): int {
+			if ( ! empty( $media[ $name ] ) && get_post( (int) $media[ $name ] ) ) {
+				return (int) $media[ $name ];
+			}
+			$src = get_template_directory() . '/assets/img/legacy/' . $name;
+			if ( ! is_readable( $src ) ) {
+				return 0;
+			}
+			$tmp = wp_tempnam( $name );
+			copy( $src, $tmp );
+			$att = media_handle_sideload( [ 'name' => $name, 'tmp_name' => $tmp ], $id );
+			if ( is_wp_error( $att ) ) {
+				@unlink( $tmp ); // phpcs:ignore
+				return 0;
+			}
+			update_post_meta( $att, '_pf_legacy_img', $name ); // playform_article_images() lader det være
+			$media[ $name ] = (int) $att;
+			update_option( 'playform_legacy_media', $media, false );
+			return (int) $att;
+		};
+		$html = preg_replace_callback(
+			'#\{IMG\}/([A-Za-z0-9._-]+)#',
+			static function ( array $m ) use ( $att_for ): string {
+				$att = $att_for( $m[1] );
+				$url = $att ? (string) wp_get_attachment_url( $att ) : '';
+				return $url ?: get_template_directory_uri() . '/assets/img/legacy/' . $m[1]; // reserve: temaets egen kopi
+			},
+			trim( (string) $opt['html'] )
+		);
+		wp_update_post( [ 'ID' => $id, 'post_content' => $html ] );
+		if ( ! empty( $opt['image'] ) ) {
+			$att = $att_for( (string) $opt['image'] );
+			if ( $att ) {
+				set_post_thumbnail( $id, $att );
+				update_post_meta( $id, '_pf_legacy_img', (string) $opt['image'] );
+				if ( ! get_post_meta( $att, '_wp_attachment_image_alt', true ) ) {
+					update_post_meta( $att, '_wp_attachment_image_alt', (string) $opt['title'] );
 				}
 			}
 		}
+		// Senest opdateret som på det gamle site (wp_insert_post sætter altid "nu").
+		$modified = (string) ( $opt['modified'] ?? $date );
+		global $wpdb;
+		$wpdb->update( $wpdb->posts, [ 'post_modified' => $modified, 'post_modified_gmt' => $gmt( $modified ) ], [ 'ID' => $id ] );
+		clean_post_cache( $id );
 		$done[ $slug ] = 'ok';
 		update_option( 'playform_legacy_posts', $done, false );
 	}
