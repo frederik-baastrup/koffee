@@ -46,6 +46,24 @@ final class Config {
 			'kirlund'            => [ 'name' => 'Kirlund', 'url' => "$base&bannerid=116914&feedid=4306" ],
 			'sumisu'             => [ 'name' => 'Sumisu', 'url' => "$base&bannerid=112338&feedid=3823" ],
 			'gourmetshoppen'     => [ 'name' => 'Gourmetshoppen.com', 'url' => "$base&bannerid=80950&feedid=1925" ],
+			// Freehand Coffee Club: kaffebønner, filterkaffe, kapsler og lidt udstyr. Vores regler placerer varerne;
+			// te, kakao, sirup, mælk, sukker og gavekort matcher intet og kommer ikke med. Tilføjet 10. nov. 2026.
+			'freehand'           => [ 'name' => 'Freehand Coffee Club', 'url' => "$base&bannerid=106500&feedid=3312" ],
+			// KaffeImperiet: kontorkaffe. Kun kaffen kommer med (fast oversættelse). Erhvervsmaskinerne (Wittenborg, Necta,
+			// Cafitesse, Bonamat – 3.000–125.000 kr, bygget til kontorer med 10–40+ ansatte), Cafitesse-koncentrat, te,
+			// vandkølere, mælk, sukker og engangsservice udelukkes. Tilføjet 10. nov. 2026.
+			'kaffeimperiet'      => [
+				'name'         => 'KaffeImperiet',
+				'url'          => "$base&bannerid=114884&feedid=4098",
+				'category_map' => [
+					'kaffe, hele bønner'                         => 'kaffe',
+					'kaffe, hele bønner, certificeret kaffe'     => 'kaffe',
+					'kaffe, espresso bønner'                     => 'kaffe',
+					'kaffe, filter kaffe'                        => 'kaffe',
+					'kaffe, filter kaffe, certificeret kaffe'    => 'kaffe',
+					'kaffe, instant kaffe'                       => 'kaffe',
+				],
+			],
 		];
 		$custom = get_option( 'playform_shops' );
 		return is_array( $custom ) && $custom ? $custom : $defaults;
@@ -62,12 +80,12 @@ final class Config {
 		return [
 			'kopper-termo'    => [ 'name' => 'Kopper & termokander', 'match' => 'espressokop|espresso ?kop|kaffekop|kaffe ?kop|cappuccinokop|lattekop|latteglas|latte ?glas|cortadoglas|cortado ?glas|\bkrus\b|kaffekrus|termokrus|thermokrus|termokop|termokande|thermokande|termoflaske|termo ?flaske|to ?go ?krus|travel ?mug|espressoglas|shotglas til espresso|kop med underkop|underkop', 'not' => 'måleskop|målebæger|mælkekande|skummer|tekop|børnekop|vandflaske|tumbler|lowball|drikkeflaske|vandflaske|straw|børnekrus|\d+ ?kopper|kaffebrygger|stempelkande|chemex|tragt|maskine|øl|vin|ølkrus|snaps' ],
 			'maelkeskummere'  => [ 'name' => 'Mælkeskummere', 'match' => 'mælkeskummer|maelkeskummer|mælke ?skummer|mælkeskum|milk ?frother|aeroccino|skumkande|mælkekande|mælke ?kande|milk ?pitcher|barista ?kande|steaming ?pitcher|cremio', 'not' => $parts . '|kapselmaskine|maskine' ],
-			'baristaudstyr'   => [ 'name' => 'Baristaudstyr', 'match' => '\btamper|portafilter|preziso|køkkenvægt med (tid|timer)|stampermåtte|\bklude?\b.*barista|barista.*klud|bundløs|naked portafilter|knock ?box|knockbox|bankekasse|kaffevægt|kaffe ?vægt|espresso ?vægt|barista ?vægt|drip ?scale|kaffeskala|\bwdt\b|distribut(ør|or)|leveler|dosering|doseringsring|dosing ring|kaffedåse|kaffe ?dåse|kaffebeholder|kaffe ?beholder|kaffeskovl|kaffemål|afkalk|rensetablet|rengøringstablet|rensemiddel til (kaffe|espresso)|descal|cafiza|puly|blindfilter|filterkurv|si til portafilter|shower ?screen|puck ?screen|tamper ?måtte|tampemåtte|barista ?klud|gruppe ?børste|espressobørste|kaffebørste|vandfilter til (kaffe|espresso)|bwt', 'not' => 'salt|peber|vitamix|blender|fermentering' ],
+			'baristaudstyr'   => [ 'name' => 'Baristaudstyr', 'match' => '\btamper|portafilter|preziso|køkkenvægt med (tid|timer)|stampermåtte|\bklude?\b.*barista|barista.*klud|bundløs|naked portafilter|knock ?box|knockbox|bankekasse|kaffevægt|kaffe ?vægt|espresso ?vægt|barista ?vægt|drip ?scale|kaffeskala|\bwdt\b|distribut(ør|or)|leveler|dosering|doseringsring|dosing ring|kaffedåse|kaffe ?dåse|kaffebeholder|kaffe ?beholder|kaffeskovl|kaffemål|afkalk|rensetablet|rengøringstablet|rensemiddel til (kaffe|espresso)|descal|cafiza|puly|blindfilter|filterkurv|si til portafilter|shower ?screen|puck ?screen|tamper ?måtte|tampemåtte|barista ?klud|gruppe ?børste|espressobørste|kaffebørste|vandfilter til (kaffe|espresso)|bwt|claris|mælkerens|mælkesystemrens', 'not' => 'salt|peber|vitamix|blender|fermentering' ],
 			'espressomaskiner' => [ 'name' => 'Espressomaskiner', 'match' => 'espressomaskine|espresso ?maskine|espresso machine|espressobrygger|portafiltermaskine|fuldautomatisk|helautomatisk|bean ?to ?cup|barista (express|pro|touch|impress)|\boracle\b|dual boiler|\bbambino\b|\bdedica\b|magnifica|rivelia|eletta|la specialista|gaggia|rancilio|\blelit\b|rocket espresso|la pavoni|lattego|\bjura\b (e|j|z|s|ena|we|giga)|siemens eq|nanopresso|picopresso|minipresso', 'not' => $parts . '|afkalk|rens|tablet|filter|tamper|kurv|vægt|skummer|mælkekande|kop|krus|case' ],
 			'kaffemaskiner'   => [ 'name' => 'Kaffemaskiner', 'match' => 'kaffemaskine|kaffe ?maskine|filterkaffemaskine|kaffebrygger(?! *(pour|v60|dripper))|moccamaster|coffee ?maker|kapselmaskine|nespresso|dolce gusto|tassimo|senseo', 'not' => $parts . '|afkalk|rens|tablet|filter til|kapsler|termokande til|vandfilter|kapselholder' ],
 			'kaffekvaerne'    => [ 'name' => 'Kaffekværne', 'match' => 'kaffekværn|kaffe ?kværn|kaffemølle|kaffe ?mølle|espressokværn|coffee ?grinder|\bgrinder\b|\bkværn\b|comandante|timemore|1zpresso|baratza|eureka mignon|fellow ode|\bniche zero\b', 'not' => 'salt|peber|krydderi|ost|parmesan|muskat|kværnsæt til|' . $parts ],
 			'kaffebrygning'   => [ 'name' => 'Kaffebrygning', 'match' => 'pour ?over|dripper|\bv60\b|chemex|aeropress|stempelkande|french ?press|presskande|mokkakande|mokkabrygger|espressokande|\bmoka\b|bialetti|cold ?brew|syphon|siphon|kalita|kaffefilter|filterholder|filterpapir|kaffetragt|kaffekande|kaffe ?kande|svanehals|gooseneck|elkedel|el-kedel|vandkoger|\bkedel\b|kaffe ?drypper|kaffebrygger', 'not' => $parts . '|tekande|te ?kande|maskine' ],
-			'kaffe'           => [ 'name' => 'Kaffe', 'match' => 'kaffebønner|kaffe ?bønner|hele bønner|espressobønner|grønne kaffebønner|formalet kaffe|filtermalet|smagepakke|kaffeabonnement|koffeinfri kaffe|single origin|\b(espresso|kaffe)\b.*\b\d+ ?(g|gr|kg)\b|kaffekapsler|kaffe ?kapsler|\bkapsler\b|kaffepuder|instant ?kaffe|pulverkaffe|(^|> )kaffe( >|$)|smagepakker', 'not' => 'maskine|kværn|kande|krus|\bkop|dåse|beholder|filter|vægt|tamper|holder|kapselholder|skuffe|låg|case|brygger|presso\b|knock|klud|' . $parts ],
+			'kaffe'           => [ 'name' => 'Kaffe', 'match' => 'kaffebønner|kaffe ?bønner|hele bønner|espressobønner|grønne kaffebønner|formalet kaffe|filtermalet|smagepakke|kaffeabonnement|koffeinfri kaffe|single origin|\b(espresso|kaffe)\b.*\b\d+ ?(g|gr|kg)\b|kaffekapsler|kaffe ?kapsler|\bkapsler\b|kaffepuder|instant ?kaffe|pulverkaffe|filterkaffe|(^|> )kaffe( >|$)|smagepakker', 'not' => 'maskine|kværn|kande|krus|\bkop|dåse|beholder|filter(?!kaffe)|vægt|tamper|holder|kapselholder|skuffe|låg|case|brygger|presso\b|knock|klud|' . $parts ],
 		];
 	}
 
@@ -127,14 +145,14 @@ final class Config {
 				'portafilter'   => [ 'name' => 'Portafilter', 'match' => 'portafilter|bundløs|naked', 'not' => 'kurv|si\b|børste' ],
 				'kaffevaegt'    => [ 'name' => 'Kaffevægt', 'match' => 'vægt|scale' ],
 				'knock-box'     => [ 'name' => 'Knock box', 'match' => 'knock ?box|knockbox|bankekasse' ],
-				'afkalkning'    => [ 'name' => 'Afkalkning og rengøring', 'match' => 'afkalk|rens|tablet|descal|cafiza|puly|børste|blindfilter|rengøring' ],
+				'afkalkning'    => [ 'name' => 'Afkalkning og rengøring', 'match' => 'afkalk|rens|tablet|claris|vandfilter|descal|cafiza|puly|børste|blindfilter|rengøring' ],
 				'kaffedaase'    => [ 'name' => 'Kaffedåse', 'match' => 'dåse|beholder|canister|vakuum|opbevaring' ],
 				'wdt-og-dosering' => [ 'name' => 'WDT og dosering', 'match' => '\bwdt\b|distribut|leveler|dosering|dosing|puck ?screen|shower ?screen|filterkurv' ],
 			],
 			'kaffe' => [
-				'hele-kaffeboenner'  => [ 'name' => 'Hele kaffebønner', 'match' => 'bønner|hele|beans|whole', 'not' => 'formalet|malet|kapsler|grønne' ],
+				'hele-kaffeboenner'  => [ 'name' => 'Hele kaffebønner', 'match' => 'bønner|hele|beans|whole|\\bhb\\b', 'not' => 'formalet|malet|kapsler|grønne' ],
 				'espressoboenner'    => [ 'name' => 'Espressobønner', 'match' => 'espresso', 'not' => 'kapsler' ],
-				'formalet-kaffe'     => [ 'name' => 'Formalet kaffe', 'match' => 'formalet|malet|filtermalet|ground' ],
+				'formalet-kaffe'     => [ 'name' => 'Formalet kaffe', 'match' => 'formalet|malet|filtermalet|filterkaffe|ground|\\bfm\\b' ],
 				'koffeinfri-kaffe'   => [ 'name' => 'Koffeinfri kaffe', 'match' => 'koffeinfri|decaf' ],
 				'kaffeabonnement'    => [ 'name' => 'Kaffeabonnement', 'match' => 'abonnement|subscription' ],
 				'kaffekapsler'       => [ 'name' => 'Kaffekapsler', 'match' => 'kapsler|kapsel|pods|puder' ],
@@ -155,7 +173,7 @@ final class Config {
 			'reservedel|spare ?part|replacement part',
 			'\bguide\b|opskriftsbog|kogebog|\bbog\b|bøger',
 			'salt ?(og|&) ?peber|saltkværn|peberkværn|krydderikværn|krydderimølle|muskatnød',
-			'tekande|te ?kande|teæg|tebrygger|matcha|te ?si\b|tesi\b',
+			'tekande|te ?kande|teæg|tebrygger|matcha|te ?si\b|tesi\b|cold ?brew te\b|\bbrev ?te\b',
 			'espresso ?martini|cocktail|shaker|vinglas|ølglas|moscow ?mule|tevarmer|bottle ?pilot|vaskemaskine|opvaskemaskine|hakker til|kødhakker|flaskerens|til flasker?\b|doseringstragt|dosertragt|flaskeholder|låg til|coravin|vitamix|krydderiblanding|krydderi\b|vandflaske|drikkeflaske|mini shot|shot ?krus|skænkeprop|hældetud|\bpourer\b|doseringsmål|\bjigger\b|spiritus|whisky|gin ?glas',
 			'gulvtæppe|\btæppe|plaid|forklæde|viskestykke|\bt-shirt\b|hættetrøje|kasket',
 		];
