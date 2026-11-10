@@ -66,7 +66,7 @@ $pf_usps  = [
 									<span class="mm__title">Kategorier</span>
 									<a class="mm__all" href="<?php echo esc_url( $item['url'] ); ?>">Se alle <?php echo esc_html( mb_strtolower( $item['label'] ) ); ?></a>
 									<?php foreach ( $item['primary'] as $i => $p ) : ?>
-										<a href="<?php echo esc_url( $p['url'] ); ?>" class="mm__cat<?php echo $i === 0 ? ' is-active' : ''; ?>" data-pane="<?php echo (int) $i; ?>"><?php echo esc_html( $p['label'] ); ?><?php echo playform_icon( 'chevron', 14 ); // phpcs:ignore ?></a>
+										<a href="<?php echo esc_url( $p['url'] ); ?>" class="mm__cat<?php echo $i === 0 ? ' is-active' : ''; ?>" data-pane="<?php echo (int) $i; ?>"><?php echo esc_html( playform_mm_short( $p['label'], $item['label'] ) ); ?><?php echo playform_icon( 'chevron', 14 ); // phpcs:ignore ?></a>
 									<?php endforeach; ?>
 								</div>
 								<?php foreach ( $item['primary'] as $i => $p ) : ?>

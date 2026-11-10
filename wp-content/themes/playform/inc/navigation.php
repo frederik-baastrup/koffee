@@ -332,3 +332,22 @@ function playform_footer_popular(): array {
 		[ 'Hele kaffebønner', 'hele-kaffeboenner' ],
 	];
 }
+
+/**
+ * Kort navn i mega-menuens venstre kolonne: menupunktet står allerede øverst, så "Fuldautomatiske espressomaskiner"
+ * under Espressomaskiner vises som "Fuldautomatiske" (10. nov. 2026 – de lange navne løb ud over kolonnen).
+ * Kun ord, der begynder med menupunktets ordstamme, fjernes ("Filterkaffemaskiner" bliver stående).
+ */
+function playform_mm_short( string $label, string $parent ): string {
+	$stem = preg_replace( '/(er|e|r)$/u', '', mb_strtolower( trim( $parent ) ) );
+	if ( mb_strlen( $stem ) < 5 ) {
+		return $label;
+	}
+	$words = preg_split( '/\s+/u', trim( $label ) );
+	$keep  = array_values( array_filter( $words, static fn( $w ) => ! str_starts_with( mb_strtolower( $w ), $stem ) ) );
+	if ( ! $keep || count( $keep ) === count( $words ) ) {
+		return $label;
+	}
+	$out = implode( ' ', $keep );
+	return mb_strtoupper( mb_substr( $out, 0, 1 ) ) . mb_substr( $out, 1 );
+}
