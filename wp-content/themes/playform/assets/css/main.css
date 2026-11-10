@@ -1674,3 +1674,7 @@ body { background: #FCFAF7; }
 @media (prefers-reduced-motion: reduce) { .camp-pat .fl { animation: none; } }
 @media (max-width: 900px) { .camp-pat .fl--wide { display: none; } .camp-pat .fl svg { width: 52px; height: 52px; } .camp-pat .fl--chip { font-size: 20px !important; } }
 @media (max-width: 640px) { .camp-hero--pattern .camp-hero__inner { min-height: 0; } .camp-pat .fl { opacity: .16 !important; } }
+
+/* "Se alle … tilbud" i kampagneheaderen glider blødt ned til produkterne (10. nov. 2026). */
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+#katalog { scroll-margin-top: 16px; }
