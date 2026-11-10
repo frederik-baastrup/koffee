@@ -31,6 +31,14 @@ function playform_kr( float $amount ): string {
 /** Tynde linjeikoner (stroke 1.4–1.6) i samme stil som designet. */
 function playform_icon( string $name, int $size = 20, float $stroke = 1.6 ): string {
 	$paths = [
+		'k-machine'   => '<path d="M5 3.5h14v4H5z"/><path d="M6.5 7.5V20.5M5 20.5h14"/><path d="M10 12h6.5l-.8 7h-4.9z"/><path d="M16.3 13.5h1.2a1.6 1.6 0 0 1 0 3.2h-1.6"/><path d="M13 9.5v1"/>',
+		'k-espresso'  => '<rect x="4" y="3.5" width="16" height="5" rx="1.5"/><path d="M5.5 8.5v12h13v-12"/><path d="M8.5 11.5h7M12 11.5v2"/><path d="M9.5 16h5v2.2a1.3 1.3 0 0 1-1.3 1.3h-2.4a1.3 1.3 0 0 1-1.3-1.3z"/>',
+		'k-grinder'   => '<path d="M7 11h10l-1.4 9.5H8.4z"/><path d="M8 11V8.5h8V11"/><path d="M12 8.5V4.5h5"/><circle cx="18" cy="4.5" r="1.2"/><path d="M10 15.5h4"/>',
+		'k-dripper'   => '<path d="M4.5 4.5h15L15 11H9z"/><path d="M8 13.5h8"/><path d="M7 13.5h10V17a3.5 3.5 0 0 1-3.5 3.5h-3A3.5 3.5 0 0 1 7 17z"/>',
+		'k-pitcher'   => '<path d="M7.5 7h8.5l3.5-2.5-2 5 .3 10.5H7.2L7.6 9.5z"/><path d="M7.4 13h10.4"/><path d="M7.5 9.5l-2-1"/>',
+		'k-cup'       => '<path d="M4.5 10h12v4.5a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5z"/><path d="M16.5 11.5h1.3a2.4 2.4 0 0 1 0 4.8h-1.6"/><path d="M8.5 3.5c-1 1.1 1 2.2 0 3.6M12.5 3.5c-1 1.1 1 2.2 0 3.6"/>',
+		'k-tamper'    => '<circle cx="12" cy="5.5" r="2.5"/><path d="M12 8v7"/><path d="M6.5 15h11v3.5a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1z"/>',
+		'k-bean'      => '<ellipse cx="12" cy="12" rx="5.8" ry="8.6" transform="rotate(35 12 12)"/><path d="M8.2 17.2c3.2-1.6 1.6-8.4 7.6-10.4"/>',
 		'arrow-right' => '<path d="M9 5l7 7-7 7"/>',
 		'arrow-left'  => '<path d="M15 5l-7 7 7 7"/>',
 		'chevron'     => '<path d="M6 9l6 6 6-6"/>',

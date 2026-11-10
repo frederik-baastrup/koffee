@@ -141,6 +141,11 @@ function playform_menu_spec(): array {
 	];
 }
 
+/** Koffee: små linjeikoner foran menupunkterne (vises på brede skærme). slug => ikon i playform_icon(). */
+function playform_menu_icons(): array {
+	return [ 'kaffemaskiner' => 'k-machine', 'espressomaskiner' => 'k-espresso', 'kaffekvaerne' => 'k-grinder', 'kaffebrygning' => 'k-dripper', 'maelkeskummere' => 'k-pitcher', 'kopper-termo' => 'k-cup', 'baristaudstyr' => 'k-tamper', 'kaffe' => 'k-bean' ];
+}
+
 /** Visningsnavne fra menuen (fx "Kaffekværne" for kategorien "Kaffekværn"), slug => navn. */
 function playform_menu_labels(): array {
 	// Underkategorierne hedder ental (som folk søger), men i menu, faner og "Tilbud på …" læser flertal bedst.
