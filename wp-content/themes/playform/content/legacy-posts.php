@@ -324,33 +324,6 @@ HTML,
 <p>At tage et kaffekursus for at lære at lave kaffe som baristaerne er en fantastisk måde at udforske kaffeverdenen på. Det giver dig ikke kun praktiske færdigheder, men også en dybere forståelse af kaffebønnens rejse fra gård til kop. Så hvis du er nysgerrig efter at forbedre dine kundskaber inden for kaffebrygning og ønsker at mestre kunsten som en ægte barista, så er et kaffekursus et skridt i den rigtige retning. Husk, at kaffebrygning er en blanding af videnskab og lidenskab, så nyd rejsen og den skønne kaffe, du skaber undervejs!</p>
 HTML,
 	],
-	'kaffens-verden-en-dybdegaaende-rejse-fra-boenne-til-kop' => [
-		'title'     => 'Kaffens verden: En dybdegående rejse fra bønne til kop',
-		'date'      => '2023-09-04 10:54:52',
-		'modified'  => '2023-09-04 10:54:52',
-		'excerpt'   => 'Kaffe er ikke blot en drik; for mange mennesker er det en kultur, en kunstform, og en livsstil. Fra dens beskedne begyndelser i Etiopien til de travle caféer i metropolerne og de hyggelige kaffebarer i små byer, har kaffe etableret sig som en universel drik. I denne artikel tager vi dig med på en rejse gennem kaffens forskellige aspekter: Fra bønnerne og de berømte kafferegioner til kunsten bag den perfekte kaffebrygning.',
-		'image'     => '2023-09-billede.jpg',
-		'hidden'    => false,
-		'sponsored' => true,
-		'html'      => <<<'HTML'
-<h2>Kaffebønnens fascinerende historie</h2>
-<p>Enhver kop kaffe starter med en grøn bønne. Men hvordan denne bønne bliver til den mørke og aromatiske drik, vi alle kender, afhænger af flere faktorer. Kaffens smag, aroma og kvalitet er stærkt påvirket af den region, den dyrkes i, samt behandlingsprocessen efter høsten.</p>
-<p>De mest berømte kaffeproducerende regioner strækker sig fra Latinamerika til Afrika og dele af Asien. Bønner fra Arabica-planter, primært dyrket i højlandet, er kendt for deres blide, aromatiske noter. I kontrast har Robusta bønner, som ofte findes i lavlandet, en mere robust og bitter profil.</p>
-<h2>Det kunstneriske bryg</h2>
-<p>Når det kommer til selve brygningen, åbner der sig en verden af muligheder. Fra den tyrkiske kaffetradition, hvor kaffen brygges i sand, til den italienske espressokultur og den skandinaviske kærlighed til filterkaffe, har hver region sine unikke bryggemetoder, der afspejler dens kulturarv.</p>
-<h2>Valg af den ultimative kaffemaskine</h2>
-<p>At vælge den rette kaffemaskine er en skelsættende beslutning for enhver kaffeentusiast. Med et bredt udvalg af maskiner på markedet kan beslutningen virke overvældende. Før du træffer dit valg, er det vigtigt at reflektere over, hvad du søger i din daglige kaffeoplevelse.</p>
-<p>Mange nyder enkeltheden og den traditionelle smag, som en dråbemaskine leverer. Disse maskiner er ofte valget for dem, der sætter pris på en ligetil, varm kop sort kaffe. Deres enkle design gør dem nemme at bruge, og mange modeller kommer med programmerbare indstillinger, der lader dig vågne op til duften af friskbrygget kaffe.</p>
-<p>På den anden side af spektret finder vi espressomaskiner. For dem, der søger en kraftigere og mere koncentreret kop kaffe, er espressomaskinen svaret. Med evnen til at arbejde under højt tryk, ekstraherer de den dybe smag og aroma fra kaffebønnerne. Dette gør dem ideelle til at skabe specialkaffer som latte, cappuccino og macchiato. Med lidt øvelse kan du perfektionere kunsten at brygge og blive din egen hjemmebarista.</p>
-<h2>Navigering i kaffemaskinernes online verden</h2>
-<p>Vi befinder os i en digital tidsalder, hvor internettet giver os adgang til nærmest uendelige mængder information. Dette er særligt gældende, når man bevæger sig ind på kaffemaskinernes territorium. Det enorme udvalg af maskiner kan virke overvældende, men takket være online anmeldelser og detaljerede testrapporter, er det blevet lettere end nogensinde før at træffe et informeret valg.</p>
-<p>Anmeldelser online, både fra eksperter inden for kaffeverdenen og almindelige hverdagsbrugere, giver et dybdegående indblik i maskinernes funktionalitet, design, prisværdighed og selvfølgelig smagsoutput. Disse vurderinger kan hjælpe med at skabe en forståelse for, hvilke egenskaber og funktioner der er væsentlige for dig som forbruger.</p>
-<p>Hvis du ønsker at sikre, at du får mest muligt for dine penge, kan det anbefales at kigge efter <a href="https://kitchy.dk/kaffemaskine-bedst-i-test/">bedste kaffemaskine i test</a> online. Et hurtigt søg kan afsløre de mest anerkendte og højt ratede maskiner på markedet. Det er nemlig ofte sådan, at de mest populære modeller ikke kun scorer højt i professionelle tests, men også får positive tilbagemeldinger fra almindelige kaffeelskere.</p>
-<p>Så inden du træffer den endelige beslutning, kan det være en god idé at afsætte lidt tid til at navigere rundt på nettet. Det er her, du vil finde nøglen til din næste perfekte kop kaffe.</p>
-<h2>Afslutning</h2>
-<p>Uanset om du er en lejlighedsvise kaffedrikker, en entusiastisk barista eller bare nogen, der kan lide en god kop kaffe om morgenen, er kaffens verden både dyb og indbydende. Fra den enkle bønne til den komplekse proces med brygning er der altid mere at lære, smage og udforske.</p>
-HTML,
-	],
 	'knaekket-en-tand-paa-kaffekoppen-se-en-god-tandlaege-koebenhavn-her' => [
 		'title'     => 'Knækket en tand på kaffekoppen? Se en god tandlæge København her',
 		'date'      => '2023-05-26 09:18:27',
@@ -404,31 +377,6 @@ HTML,
 <h2>Så koffeinfri er ikke skadeligt, hvis jeg er gravid?</h2>
 <p>Som du kan se tabellen ovenover, er der forsvindende lidt koffein i koffeinfri kaffe. Det betyder altså, at du sagtens kan drikke koffeinfri kaffe som gravid – og du behøver stort set ikke at tænke over, hvor meget du indtager, hvis blot du sørger for ikke at indtage for mange andre koffeinholdige drikke- og fødevarer.</p>
 <p>Som nævnt, er der fortsat tvivl om, hvorvidt et større forbrug af kaffe og koffein under graviditet kan have negative konsekvenser for fosteret. Du bør derfor undlade at overstige de 3 kopper, der maksimalt anbefales pr. dag – eller koffein fra andre koffeinholdige drikke- og spisevarer.</p>
-HTML,
-	],
-	'praktiske-og-stilfulde-termokrus-og-termokander' => [
-		'title'     => 'Praktiske og stilfulde termokrus og termokander',
-		'date'      => '2023-04-28 11:59:43',
-		'modified'  => '2023-04-28 12:01:17',
-		'excerpt'   => 'Termokrus og termokander er en praktisk og stilfuld måde at holde dine drikkevarer varme eller kolde på, både når du er på farten og derhjemme. Hos Hvidevareshoppen.dk kan du finde et stort udvalg af termokrus og termokander i forskellige farver og designs, så du kan finde præcis den type, der passer bedst til dine behov og personlige stil.',
-		'image'     => '2023-04-termokander-termokrus.jpg',
-		'hidden'    => false,
-		'sponsored' => true,
-		'html'      => <<<'HTML'
-<figure><img src="{IMG}/2023-04-termokander-termokrus.jpg" alt="" width="1000" height="666"></figure>
-<h2>Termokrus på farten og i hjemmet</h2>
-<p>Når du er på farten, er et termokrus uundværligt. Du kan nemt hælde kaffe, te eller kakao i kruset fra kaffemaskinen og lukke det tætsluttende låg. På den måde holder dine drikkevarer sig varme i timevis, og du kan nyde dem, når du har tid og lyst.</p>
-<p>Termokrus er også praktiske til kolde drikkevarer på de varme sommerdage, hvor det er svært at holde drikkevarerne kølige. Hos Hvidevareshoppen.dk kan du finde termokrus i forskellige størrelser og farver, der passer til dine behov.</p>
-<p>Termokrus og termokopper er også blevet meget populære til daglig brug i hjemmet. Du kan finde flotte termokrus i moderne designs, der passer perfekt ind i enhver boligindretning. Brug kruset som en hurtig og praktisk hverdagskop, eller når du skal dække op til gæster. Hos Hvidevareshoppen.dk kan du finde termokrus i mange forskellige farver og designs, så du kan sammensætte dem, så de passer til resten af din boligindretning.</p>
-<h2>Termokander til varme og kolde drikke</h2>
-<p>Termokander er også en praktisk og stilfuld måde at holde dine drikkevarer varme eller kolde på. Hos Hvidevareshoppen.dk kan du finde termokander i mange forskellige farver, størrelser og designs, så du kan vælge den type kande, der passer bedst til dit formål.</p>
-<p>De traditionelle termokander med skrue- eller vippelåg er lette at hælde af og kan nemt sendes bordet rundt. En stempelkande er perfekt til kaffeentusiasten, der gerne vil gøre lidt ekstra ud af kaffebrygningen. En termokande med pumpe er praktisk, når du har mange gæster, der skal have varm kaffe i en fart. En termoflaske er ideel til håndværkeren eller til skovture, hvor du har brug for at have varme eller kolde drikkevarer ved hånden.</p>
-<p>Uanset hvilken type termokande du vælger, kan du være sikker på, at den holder dine drikkevarer tempererede i lang tid. Hos Hvidevareshoppen.dk kan du finde termokander i mange forskellige designs, der passer til enhver smag og boligindretning.</p>
-<h3>Stort udvalg af termokrus og termokander hos Hvidevareshoppen.dk</h3>
-<p>Hos Hvidevareshoppen.dk kan du finde et <a href="https://hvidevareshoppen.dk/shop/termokrus-953c1.html">stort udvalg af termokrus på tilbud</a> og <a href="https://hvidevareshoppen.dk/shop/termokander-952c1.html">termokander til billige priser</a> og med hurtig levering. Vi tilbyder også en lang række andre praktiske og stilfulde køkken- og husholdningsprodukter, så du kan få alt, hvad du behøver til dit hjem. Uanset om du mangler en ny blender, en hurtig vandkoger eller en effektiv støvsuger, kan du finde det hele hos os.</p>
-<p>Vi går også op i bæredygtighed og miljøbevidsthed, og derfor tilbyder vi også produkter, der er lavet af bæredygtige materialer og er genanvendelige. På den måde kan du passe på både miljøet og din pengepung.</p>
-<p>Vi vil gerne gøre det nemt og bekvemt for vores kunder at handle hos os, og derfor tilbyder vi også en nem og sikker online shopping oplevelse. Du kan nemt og hurtigt bestille dine produkter på vores hjemmeside, og vi sørger for, at de bliver leveret direkte til din dør.</p>
-<p>Så uanset om du mangler en termokande til din morgenkaffe eller en ny støvsuger til dit hjem, kan du finde det hele hos Hvidevareshoppen.dk eller i vores fysiske butik i Brovst (<a href="https://novaindex.com/dk/kai-berntsens-knaldhaarde-hvidevarer">find virksomhedsoplysninger</a>). Vi glæder os til at hjælpe dig med at finde de produkter, du har brug for, og give dig en god shopping oplevelse.</p>
 HTML,
 	],
 	'saadan-starter-du-din-egen-barista-forretning' => [

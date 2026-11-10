@@ -425,6 +425,9 @@ function playform_legacy_redirects(): array {
 		// Sider fra det gamle site
 		'om-os'   => '/saadan-fungerer-det/',     // "Koffee.dk – Din guide til den bedste kaffe" (om siden)
 		'annonce' => '/saadan-tjener-vi-penge/', // annonceinformation
+		// Solgte linkbuilding-artikler fra 2023, fjernet efter ejerens ønske 10. nov. 2026
+		'kaffens-verden-en-dybdegaaende-rejse-fra-boenne-til-kop' => 410,
+		'praktiske-og-stilfulde-termokrus-og-termokander'         => 410,
 		// Kategorier fra det gamle site
 		'inspiration' => '/viden/',
 		'guides'      => '/viden/',

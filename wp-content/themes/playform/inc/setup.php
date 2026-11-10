@@ -1082,3 +1082,21 @@ add_action(
 	},
 	40
 );
+
+/** Fjernede gamle artikler (10. nov. 2026): læg dem i papirkurven én gang. Adresserne svarer 410 (playform_legacy_redirects()). */
+add_action(
+	'init',
+	static function (): void {
+		if ( get_option( 'playform_removed_posts_v' ) === '1' ) {
+			return;
+		}
+		foreach ( [ 'kaffens-verden-en-dybdegaaende-rejse-fra-boenne-til-kop', 'praktiske-og-stilfulde-termokrus-og-termokander' ] as $slug ) {
+			$p = get_page_by_path( $slug, OBJECT, 'post' );
+			if ( $p ) {
+				wp_trash_post( $p->ID );
+			}
+		}
+		update_option( 'playform_removed_posts_v', '1', false );
+	},
+	30
+);
