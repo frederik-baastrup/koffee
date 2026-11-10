@@ -464,4 +464,60 @@ HTML,
 <p>Herover er blot nogle eksempler af den righoldige verden af kaffekulturer, der findes rundt om i verden. Uanset hvor vi rejser, kan vi altid finde fællesskab og glæde i en god kop kaffe.</p>
 HTML,
 	],
+	'kaffens-verden-en-dybdegaaende-rejse-fra-boenne-til-kop' => [
+		'title'     => 'Kaffens verden: En dybdegående rejse fra bønne til kop',
+		'date'      => '2023-09-04 10:54:52',
+		'modified'  => '2026-11-10 11:00:00',
+		'excerpt'   => 'Fra den grønne bønne på plantagen til den kop, du drikker om morgenen: Her får du kaffens vej forklaret enkelt – bønnetyper, dyrkning, brygning og hvordan du vælger en maskine, der passer til din måde at drikke kaffe på.',
+		'image'     => '2023-09-billede.jpg',
+		'hidden'    => false,
+		'sponsored' => true,
+		'rewrite'   => 1,
+		'html'      => <<<'HTML'
+<p>Det tager et par minutter at brygge en kop kaffe, men bønnen har ofte rejst i månedevis for at nå frem. Kender du de store linjer – hvor bønnen kommer fra, hvad der sker med den undervejs, og hvordan den bliver brygget – bliver det meget lettere at vælge kaffe og udstyr, du faktisk bliver glad for.</p>
+<h2>Kaffebønnens fascinerende historie</h2>
+<p>Kaffebønnen er kernen i et rødt bær, der vokser på kaffebusken. Når bærrene er plukket, bliver frugtkødet fjernet, og bønnerne tørres. På det tidspunkt er de grønne og lugter næsten ikke af kaffe. Det er først ristningen, der giver farven, duften og smagen.</p>
+<p>To arter fylder mest. <b>Arabica</b> dyrkes typisk i højere luftlag og giver en blødere kop med mere syre og flere nuancer. <b>Robusta</b> klarer sig i varmere og lavere egne, smager kraftigere og mere bittert og bruges ofte i espressoblandinger for at give fylde og crema. Også jorden, klimaet og den måde, bønnerne behandles på efter høsten, sætter sit præg – derfor smager kaffe fra Etiopien, Colombia og Indonesien så forskelligt.</p>
+<h2>Det kunstneriske bryg</h2>
+<p>Den samme bønne kan smage vidt forskelligt, alt efter hvordan du brygger den. I Tyrkiet koges den fintmalede kaffe i en lille kande, i Italien presses vandet gennem kaffen under højt tryk til en espresso, og i Skandinavien har filterkaffen været hverdagskaffen i generationer.</p>
+<p>Fælles for alle metoderne er tre ting, du selv kan styre: hvor fint kaffen er malet, hvor varmt vandet er, og hvor længe vand og kaffe er i kontakt. Små justeringer her flytter smagen mere, end man skulle tro. Vil du eksperimentere, er <a href="/kaffebrygning/">manuelle bryggemetoder</a> som pour over og stempelkande et billigt sted at starte.</p>
+<h2>Valg af den ultimative kaffemaskine</h2>
+<p>Den rigtige maskine er den, der passer til din morgen. Start med at spørge dig selv, hvad du oftest drikker, hvor mange I er, og hvor meget tid du har lyst til at bruge.</p>
+<p>Drikker du mest sort kaffe, er en <a href="/kaffemaskiner/filterkaffemaskine/">filterkaffemaskine</a> svær at slå. Den er enkel at bruge, brygger en hel kande ad gangen, og mange modeller kan stilles til at starte, før du står op.</p>
+<p>Drømmer du om latte, cappuccino og flat white, skal du kigge på <a href="/espressomaskiner/">espressomaskiner</a>. En fuldautomatisk maskine maler, doserer og brygger for dig med et tryk på en knap. En semiautomatisk maskine kræver lidt mere øvelse, men giver dig til gengæld fuld kontrol over koppen – og det er der, mange for alvor får smag for kaffe.</p>
+<h2>Navigering i kaffemaskinernes online verden</h2>
+<p>Udvalget af kaffemaskiner er stort, og det kan være svært at se forskel på modellerne ud fra en produktside. Derfor er det en god idé at læse med flere steder, før du bestemmer dig: Se på, hvad andre ejere skriver om holdbarhed og rengøring, og sammenlign de funktioner, du rent faktisk kommer til at bruge.</p>
+<p>Vil du se, hvordan andre har vurderet de populære modeller, kan du læse mere om <a href="https://kitchy.dk/kaffemaskine-bedst-i-test/">bedste kaffemaskine i test</a>. Og vil du sammenligne aktuelle priser fra de butikker, vi samarbejder med, finder du vores bud i guiden til <a href="/bedste-kaffemaskine/">den bedste kaffemaskine</a>.</p>
+<h2>Afslutning</h2>
+<p>Kaffens rejse fra bær til kop er lang, men du behøver ikke kende hvert led for at drikke god kaffe. Vælg bønner, du kan lide, en bryggemetode, der passer til din hverdag, og giv dig tid til at justere – så bliver den næste kop lidt bedre end den forrige.</p>
+HTML,
+	],
+	'praktiske-og-stilfulde-termokrus-og-termokander' => [
+		'title'     => 'Praktiske og stilfulde termokrus og termokander',
+		'date'      => '2023-04-28 11:59:43',
+		'modified'  => '2026-11-10 11:00:00',
+		'excerpt'   => 'Et godt termokrus holder kaffen varm hele vejen til arbejde, og en termokande holder kaffen frisk på bordet, når der er gæster. Her er, hvad du skal kigge efter, når du vælger det ene eller det andet.',
+		'image'     => '2023-04-termokander-termokrus.jpg',
+		'hidden'    => false,
+		'sponsored' => true,
+		'rewrite'   => 1,
+		'html'      => <<<'HTML'
+<p>Kaffe smager bedst varm, men den bliver hurtigt lunken i en almindelig kop eller kande. Et termokrus eller en termokande løser det: Den dobbelte væg isolerer, så drikken holder temperaturen længe – og det virker lige så godt med iskaffe en varm sommerdag.</p>
+<h2>Termokrus på farten og i hjemmet</h2>
+<p>Et termokrus er lavet til dig, der tager kaffen med. Kig efter et låg, der lukker tæt, så du trygt kan have kruset i tasken, og som er nemt at drikke af med én hånd. Tjek også, om kruset passer i bilens kopholder og under din kaffemaskine, og om låget kan skilles ad, så det er let at gøre rent.</p>
+<p>Mange bruger også termokruset derhjemme. Kaffen holder sig varm, mens du læser avis eller arbejder, og du slipper for at varme koppen op igen. Vælg et krus i et design og en farve, du kan lide at se på – så bliver det hurtigt din faste hverdagskop. Se udvalget af <a href="/kopper-termo/termokrus/">termokrus</a> fra de butikker, vi samarbejder med.</p>
+<h2>Termokander til varme og kolde drikke</h2>
+<p>En termokande holder en hel kande kaffe varm på bordet, så den sidste kop smager lige så godt som den første. Typen afhænger af, hvordan du bruger den:</p>
+<ul>
+<li><b>Kande med skrue- eller vippelåg</b> er den klassiske. Den er let at hælde af og nem at sende rundt om bordet.</li>
+<li><b>Pumpekande</b> er praktisk, når mange gæster skal have kaffe hurtigt – til møder, fester og familiekomsammen.</li>
+<li><b>Stempelkande med isolering</b> lader dig brygge og servere i samme kande.</li>
+<li><b>Termoflaske</b> er robust og tæt og passer til skovturen, sportspladsen og arbejdet ude.</li>
+</ul>
+<p>Tænk også på størrelsen: Brygger du en fuld kande hver morgen, skal termokanden kunne rumme det hele. Og en kande, der kan skilles ad, er nemmere at holde fri for kaffebelægninger. Vil du se vores bud på gode modeller, så læs guiden til <a href="/bedste-termokande/">den bedste termokande</a>.</p>
+<h3>Stort udvalg af termokrus og termokander hos Hvidevareshoppen.dk</h3>
+<p>Hvidevareshoppen.dk har et bredt udvalg af isolerede krus og kander i mange farver og størrelser. Her kan du se et <a href="https://hvidevareshoppen.dk/shop/termokrus-953c1.html">stort udvalg af termokrus på tilbud</a> og finde <a href="https://hvidevareshoppen.dk/shop/termokander-952c1.html">termokander til billige priser</a> – og samtidig handle andet til køkkenet, fx en ny elkedel eller blender.</p>
+<p>Butikken har også en fysisk forretning i Brovst. Vil du vide mere om virksomheden bag, så <a href="https://novaindex.com/dk/kai-berntsens-knaldhaarde-hvidevarer">find virksomhedsoplysninger</a> om Kai Berntsens Knaldhårde Hvidevarer.</p>
+HTML,
+	],
 ];

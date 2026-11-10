@@ -1083,20 +1083,37 @@ add_action(
 	40
 );
 
-/** Fjernede gamle artikler (10. nov. 2026): læg dem i papirkurven én gang. Adresserne svarer 410 (playform_legacy_redirects()). */
+/**
+ * Omskrevne solgte artikler (ejerens valg 10. nov. 2026): 'rewrite' => N i content/legacy-posts.php lægger den nye tekst
+ * og det nye uddrag på artiklen én gang (meta _pf_rewrite). Titel, adresse, links og ankertekster er de samme.
+ * Hentes også ud af papirkurven (de lå der kortvarigt).
+ */
 add_action(
 	'init',
 	static function (): void {
-		if ( get_option( 'playform_removed_posts_v' ) === '1' ) {
+		$file = get_template_directory() . '/content/legacy-posts.php';
+		$list = is_readable( $file ) ? (array) require $file : [];
+		$key  = md5( (string) wp_json_encode( array_map( static fn( $o ) => $o['rewrite'] ?? 0, $list ) ) );
+		if ( get_option( 'playform_rewrite_v' ) === $key ) {
 			return;
 		}
-		foreach ( [ 'kaffens-verden-en-dybdegaaende-rejse-fra-boenne-til-kop', 'praktiske-og-stilfulde-termokrus-og-termokander' ] as $slug ) {
-			$p = get_page_by_path( $slug, OBJECT, 'post' );
-			if ( $p ) {
-				wp_trash_post( $p->ID );
+		foreach ( $list as $slug => $opt ) {
+			if ( empty( $opt['rewrite'] ) ) {
+				continue;
 			}
+			$ids = get_posts( [ 'post_type' => 'post', 'post_status' => 'trash', 'numberposts' => 1, 'fields' => 'ids', 'meta_key' => '_wp_desired_post_slug', 'meta_value' => $slug ] );
+			if ( $ids ) {
+				wp_untrash_post( $ids[0] );
+				wp_update_post( [ 'ID' => $ids[0], 'post_status' => 'publish', 'post_name' => $slug ] );
+			}
+			$p = get_page_by_path( $slug, OBJECT, 'post' );
+			if ( ! $p || (int) get_post_meta( $p->ID, '_pf_rewrite', true ) >= (int) $opt['rewrite'] ) {
+				continue;
+			}
+			wp_update_post( [ 'ID' => $p->ID, 'post_content' => trim( (string) $opt['html'] ), 'post_excerpt' => (string) ( $opt['excerpt'] ?? '' ), 'post_status' => 'publish' ] );
+			update_post_meta( $p->ID, '_pf_rewrite', (int) $opt['rewrite'] );
 		}
-		update_option( 'playform_removed_posts_v', '1', false );
+		update_option( 'playform_rewrite_v', $key, false );
 	},
 	30
 );
