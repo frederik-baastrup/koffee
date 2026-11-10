@@ -1682,3 +1682,9 @@ body { background: #FCFAF7; }
 /* Kampagnebarens knap i den lyse karamel fra Black Friday-headeren, så den skiller sig ud på den mørkebrune bar (10. nov. 2026). */
 .campaign-bar__btn { background: #D9A66B; color: #17110D; }
 .campaign-bar__btn:hover, .campaign-bar__btn:focus-visible { background: #E6BB86; color: #17110D; }
+
+/* Prislisten: butikkens tilbud med førpris og besparelse (10. nov. 2026). */
+.badge--sale { background: var(--sale, #B42318); color: #fff; font-weight: 700; }
+.offer__shop .badge + .badge { margin-left: 4px; }
+.offer__was { font-size: 12px; font-weight: 600; color: var(--sale, #B42318); white-space: nowrap; }
+.offer__was s { color: var(--muted-2, #8A8A84); font-weight: 400; }
