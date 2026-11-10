@@ -1678,3 +1678,7 @@ body { background: #FCFAF7; }
 /* "Se alle … tilbud" i kampagneheaderen glider blødt ned til produkterne (10. nov. 2026). */
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 #katalog { scroll-margin-top: 16px; }
+
+/* Kampagnebarens knap i den lyse karamel fra Black Friday-headeren, så den skiller sig ud på den mørkebrune bar (10. nov. 2026). */
+.campaign-bar__btn { background: #D9A66B; color: #17110D; }
+.campaign-bar__btn:hover, .campaign-bar__btn:focus-visible { background: #E6BB86; color: #17110D; }
