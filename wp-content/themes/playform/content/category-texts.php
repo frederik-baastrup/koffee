@@ -296,4 +296,8 @@ return [
 	'oekologisk-kaffe'            => [
 		'intro' => 'Økologisk kaffe – hele bønner og formalet. Se udvalget fra de butikker og risterier, vi samarbejder med.',
 	],
+	'kaffemaskine-til-kontoret' => [
+		'intro' => 'Kaffemaskiner til kontoret og arbejdspladsen – til hele bønner, filterkaffe, instant og Cafitesse, beregnet til mange kopper om dagen. Se modellerne fra de butikker, vi samarbejder med.',
+		'seo'   => '<h2>Kaffemaskine til kontoret – sådan vælger I</h2><p>En kaffemaskine til kontoret skal kunne lave mange kopper hver dag uden at gå i stå, og den skal være nem for alle at bruge og holde ren. Her finder I professionelle maskiner fra de butikker, vi samarbejder med. Mange forhandlere tilbyder også service, leasing og aftaler om kaffe og ingredienser, så spørg butikken, inden I bestiller.</p><h3>Hele bønner, filter, instant eller koncentrat</h3><p>En maskine til <strong>hele bønner</strong> maler frisk til hver kop og giver espresso, cappuccino og kaffe med fylde. En <strong>filtermaskine</strong> brygger større mængder ad gangen, og maskiner til <strong>instant</strong> eller <strong>Cafitesse-koncentrat</strong> er hurtige og kræver meget lidt rengøring.</p><h3>Antal medarbejdere og drikke</h3><p>Tænk på, hvor mange I er, og hvor mange kopper der drikkes i spidsbelastningen om morgenen. Skal maskinen også kunne lave varm chokolade eller drikke med mælk, så se efter en model med ekstra beholdere eller frisk mælk.</p><h3>Vand, service og pris</h3><p>Nogle maskiner tilsluttes vandhanen direkte, andre har en vandtank. Spørg til service, afkalkning og reservedele, og regn med løbende udgifter til kaffe og ingredienser, når I sammenligner priser.</p>',
+	],
 ];

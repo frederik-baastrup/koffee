@@ -62,6 +62,9 @@ final class Config {
 					'kaffe, filter kaffe'                        => 'kaffe',
 					'kaffe, filter kaffe, certificeret kaffe'    => 'kaffe',
 					'kaffe, instant kaffe'                       => 'kaffe',
+					// Kaffemaskiner til kontoret (ejeren 10. nov. 2026: egen side, høje priser). Pumpekanden i "Kolbe bryggere" er ikke en maskine.
+					'maskiner, kolbe bryggere'                   => 'exclude',
+					'~^(?!.*(vand ?køler|kildevand)).*(maskiner|kaffemaskine)'  => 'kaffemaskiner',
 				],
 			],
 		];
@@ -101,6 +104,7 @@ final class Config {
 				'kaffemaskine-med-termokande' => [ 'name' => 'Kaffemaskine med termokande', 'match' => 'termo|thermo|stålkande', 'desc' => 'termokande|thermo' ],
 				'moccamaster'                => [ 'name' => 'Moccamaster', 'match' => 'moccamaster' ],
 				'kapselmaskine'              => [ 'name' => 'Kapselmaskine', 'match' => 'kapsel|nespresso|dolce gusto|tassimo|senseo|vertuo' ],
+				'kaffemaskine-til-kontoret'  => [ 'name' => 'Kaffemaskine til kontoret', 'match' => 'wittenborg|necta|cafitesse|bonamat|gaggia la (brilliante|radiosa)|jura x10|\\b(es|in) ?\\+|b2c' ],
 				'kaffemaskine-til-1-kop'     => [ 'name' => 'Kaffemaskine til 1 kop', 'match' => '1 kop|en kop|single ?serve|one ?cup|1-kops|personal', 'desc' => 'én kop|1 kop' ],
 			],
 			'espressomaskiner' => [

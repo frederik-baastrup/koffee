@@ -21,7 +21,16 @@ final class Classifier {
 		$shop = Config::shops()[ $offer['shop'] ] ?? [];
 		$map  = $shop['category_map'] ?? null;
 		if ( is_array( $map ) ) {
-			$mapped = $map[ $cat ] ?? 'exclude';
+			$mapped = $map[ $cat ] ?? null;
+			if ( null === $mapped ) { // nøgler, der starter med '~', er regex mod butikkens kategori (fx KaffeImperiets lange kategorilister)
+				foreach ( $map as $k => $v ) {
+					if ( is_string( $k ) && str_starts_with( $k, '~' ) && self::m( substr( $k, 1 ), $cat ) ) {
+						$mapped = $v;
+						break;
+					}
+				}
+			}
+			$mapped = $mapped ?? 'exclude';
 			// 'refine': butikken sælger kun nichens varer – vores egne regler må placere varen mere præcist
 			// (fx en tamper i butikkens "Andet kaffeudstyr"), ellers bruges butikkens kategori.
 			if ( 'exclude' !== $mapped && ! empty( $shop['refine'] ) ) {

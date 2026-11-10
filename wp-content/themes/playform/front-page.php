@@ -32,6 +32,7 @@ function playform_front_products( string $which ): array {
 			// "Populære": maskiner og kværne (størst kurv og kommission), blandet hver dag.
 			$base['tax_query']    = [ [ 'taxonomy' => 'product_cat', 'field' => 'slug', 'terms' => [ 'espressomaskiner', 'kaffemaskiner', 'kaffekvaerne' ] ] ];
 			$base['meta_query'][] = [ 'key' => '_price', 'value' => 500, 'compare' => '>=', 'type' => 'NUMERIC' ];
+			$base['meta_query'][] = [ 'key' => '_price', 'value' => 20000, 'compare' => '<=', 'type' => 'NUMERIC' ]; // ikke kontormaskiner til 50.000+ kr. på forsiden
 			$base['orderby']      = 'rand';
 		}
 		$ids = get_posts( $base );

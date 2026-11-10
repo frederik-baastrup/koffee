@@ -161,6 +161,7 @@ function playform_menu_labels(): array {
 		'moccamaster'                 => 'Moccamaster',
 		'kapselmaskine'               => 'Kapselmaskiner',
 		'kaffemaskine-til-1-kop'      => 'Kaffemaskiner til 1 kop',
+		'kaffemaskine-til-kontoret' => 'Kaffemaskiner til kontoret',
 		'fuldautomatisk-espressomaskine' => 'Fuldautomatiske espressomaskiner',
 		'semiautomatisk-espressomaskine' => 'Semiautomatiske espressomaskiner',
 		'espressomaskine-med-kvaern'  => 'Espressomaskiner med kværn',
