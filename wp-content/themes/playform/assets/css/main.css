@@ -1573,3 +1573,14 @@ body { background: #FCFAF7; }
 	.mm__cat { white-space: nowrap; }
 	.mm__col a.mm__more { white-space: nowrap; }
 }
+
+/* Koffee: 8 kategorier fylder hele anden linje, så Viden, Købsguides og Tilbud står i første linje til venstre for søgefeltet
+   (ejeren 10. nov. 2026). */
+@media (min-width: 1081px) {
+	.site-header__row, .site-header__row:is(*) { grid-template-areas: "logo knowledge search" "mm mm mm"; }
+	.site-header__row > .knowledge { display: flex; justify-self: end; align-self: center; height: 46px; }
+	.site-header__row > .mm > .mm__item--plain { display: none !important; }
+	.site-header__row > .search { width: 400px; }
+	.site-header.is-searching .search { width: 480px; }
+}
+@media (min-width: 1081px) and (max-width: 1240px) { .site-header__row > .search { width: 300px; } .site-header__row > .mm { gap: 16px; } }
