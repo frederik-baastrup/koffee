@@ -33,19 +33,18 @@ HTML,
 			'less'    => [ 'Dig, der kun skal male lidt kaffe en gang imellem' ],
 		],
 		[
-			'ean'     => '8056746348502',
-			'price'   => 2959,
-			'name'    => 'Eureka Mignon Specialità',
+			'ean'     => '8009437001859',
+			'price'   => 3995,
+			'name'    => 'Lelit PL72 William',
 			'role'    => 'Bedst til espresso',
 			'reviews' => [],
-			'verdict' => 'Italiensk kværn, der går fra grov stempelkandekaffe helt ned til den fine maling, tyrkisk kaffe kræver.',
+			'verdict' => 'Espressokværn til hjemmebaristaen, der hellere vil have en ligetil betjening end en masse digitale menuer.',
 			'why'     => <<<'HTML'
-<p>Eureka Mignon Specialità er til dig, der har en espressomaskine eller drømmer om en. Espresso stiller de største krav til en kværn: kaffen skal males meget fint, og du skal kunne justere den i små skridt, indtil shottet løber, som det skal.</p>
-<p>Kværnen kan gå hele vejen fra den grove maling til stempelkande og ned til den helt fine til tyrkisk kaffe. Den kan altså mere end espresso, men det er her, den for alvor gør en forskel.</p>
-<p>Eureka er en italiensk kværnproducent med espresso som speciale. Har du allerede en <a href="/semiautomatisk-espressomaskine/">semiautomatisk espressomaskine</a>, er en dedikeret kværn som denne det næste store skridt.</p>
+<p>Lelit William er lavet til dig, der står ved en espressomaskine derhjemme. Netop espresso er det, der kræver mest af en kværn: kaffen skal være meget fin og ensartet, og du skal kunne flytte malingen et lille nøk ad gangen, indtil shottet løber, som du vil have det.</p>
+<p>Kværnen hører til den enkle skole. Den er bygget til hjemmebaristaen, der vil have en direkte vej til en god espresso uden fuld digital styring og skærme at navigere i. Har du allerede en <a href="/semiautomatisk-espressomaskine/">semiautomatisk espressomaskine</a>, er en dedikeret espressokværn som denne det næste store skridt.</p>
 HTML,
-			'good'    => [ 'Espresso med portafilter', 'Dig, der vil finjustere hvert shot', 'Både fin og grov maling' ],
-			'less'    => [ 'Dig, der kun brygger filterkaffe' ],
+			'good'    => [ 'Espresso med portafilter', 'Dig, der foretrækker enkel betjening' ],
+			'less'    => [ 'Dig, der kun brygger filterkaffe', 'Dig, der vil have display og programmer' ],
 		],
 		[
 			'ean'     => '7044876023001',

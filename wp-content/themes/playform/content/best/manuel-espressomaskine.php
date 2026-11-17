@@ -46,15 +46,16 @@ HTML,
 			'less'    => [ 'Lavt budget', 'Et minimalistisk køkken' ],
 		],
 		[
-			'ean'     => '8010072228174',
-			'price'   => 9495,
-			'name'    => 'La Pavoni Esperto Competente',
+			'ean'     => '8010072228181',
+			'eans'    => [ '8010072228181', '8010072228174' ],
+			'price'   => 10995,
+			'name'    => 'La Pavoni Esperto',
 			'role'    => 'Med niveauindikator',
 			'reviews' => [],
 			'verdict' => 'Håndtagsmaskine fra La Pavoni med dampfunktion og indikator for vandniveauet, så du altid ved, hvor du står.',
 			'why'     => <<<'HTML'
-<p>Esperto Competente er La Pavonis bud på en håndtagsmaskine med lidt flere hjælpemidler. Den har dampfunktion til mælken og en indikator for vandniveauet, så du kan se, hvornår der skal fyldes op. Det lyder som en lille ting, men på en manuel maskine, hvor du har fokus på håndtaget, er det rart ikke at skulle gætte.</p>
-<p>Denne udgave har detaljer i guld og er bygget til den, der vil have en maskine, der både fungerer og ser eksklusiv ud. Den er et godt valg, hvis du har drømt om en La Pavoni, men gerne vil have lidt mere overblik under brygningen.</p>
+<p>Esperto er La Pavonis bud på en håndtagsmaskine med lidt flere hjælpemidler. Den har dampfunktion til mælken og en indikator for vandniveauet, så du kan se, hvornår der skal fyldes op. Det lyder som en lille ting, men på en manuel maskine, hvor du har fokus på håndtaget, er det rart ikke at skulle gætte.</p>
+<p>Maskinen er bygget i stål og henvender sig til den, der vil have en maskine, der både fungerer og ser eksklusiv ud. Den er et godt valg, hvis du har drømt om en La Pavoni, men gerne vil have lidt mere overblik under brygningen.</p>
 HTML,
 			'good'    => [ 'Overblik under brygningen', 'Cappuccino med damp', 'Dig, der vil have en eksklusiv maskine' ],
 			'less'    => [ 'Lavt budget', 'Dig, der aldrig har prøvet espresso før' ],

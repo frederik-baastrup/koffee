@@ -1,7 +1,8 @@
 <?php
 /**
  * Omskrevet fra det gamle koffee.dk (/kaffevaegt/, 2022). Ny tekst og nye produkter.
- * Kun 3 modeller: feedsne havde 9. nov. 2026 kun to egentlige kaffevægte med EAN på lager (NOD, Escali) plus én køkkenvægt med timer.
+ * Kun 2 modeller: feedsne havde 9. nov. 2026 kun to egentlige kaffevægte med EAN på lager (NOD, Escali) plus én køkkenvægt med timer.
+ * Escali Versi er fjernet 17. nov. 2026 (udsolgt, ingen anden kaffevægt med EAN på lager).
  * Fakta om produkterne kommer kun fra butikkernes produktdata. Vi har ikke selv afprøvet produkterne.
  */
 defined( 'ABSPATH' ) || exit;
@@ -10,12 +11,12 @@ return [
 	'slug'     => 'kaffevaegt',
 	'date'     => '2022-06-06 10:00:00',
 	'keyword'  => 'kaffevægt',
-	'title'    => 'Kaffevægt: Vores bud på de 3 bedste med timer',
-	'excerpt'  => 'En kaffevægt med timer er det billigste redskab, der gør din kaffe mere ens fra dag til dag. Her er vores bud på de 3 bedste kaffevægte fra de butikker, vi samarbejder med.',
+	'title'    => 'Kaffevægt: Vores bud på de 2 bedste med timer',
+	'excerpt'  => 'En kaffevægt med timer er det billigste redskab, der gør din kaffe mere ens fra dag til dag. Her er vores bud på de 2 bedste vægte med timer fra de butikker, vi samarbejder med.',
 	'more_cat' => 'kaffevaegt',
 	'intro'    => <<<'HTML'
 <p>Smager din kaffe fantastisk den ene dag og flad den næste? Så er det sjældent bønnerne, der er problemet. Det er mængden. En måleske rammer forskelligt fra gang til gang, fordi bønner og malet kaffe fylder forskelligt alt efter ristning og maling. En vægt måler det, der betyder noget: gram kaffe og gram vand.</p>
-<p>En kaffevægt har som regel også en timer, så du kan styre, hvor hurtigt du hælder, og hvor længe kaffen trækker. Herunder er vores bud på de 3 bedste fra de butikker, vi samarbejder med, og nederst forklarer vi, hvordan du kommer i gang med at veje.</p>
+<p>En kaffevægt har som regel også en timer, så du kan styre, hvor hurtigt du hælder, og hvor længe kaffen trækker. Herunder er vores bud på de 2 bedste fra de butikker, vi samarbejder med, og nederst forklarer vi, hvordan du kommer i gang med at veje.</p>
 HTML,
 	'picks'    => [
 		[
@@ -34,21 +35,6 @@ HTML,
 			'less'    => [ 'Dig, der vil have færdige bryggeprogrammer' ],
 		],
 		[
-			'ean'     => '857817000286',
-			'price'   => 541,
-			'name'    => 'Escali Versi kaffevægt',
-			'role'    => 'Bedst til pour over',
-			'reviews' => [],
-			'verdict' => 'Kaffevægt med timer og 4 forprogrammerede pour over-indstillinger, der guider dig gennem brygningen.',
-			'why'     => <<<'HTML'
-<p>Escali Versi er til dig, der brygger pour over og gerne vil have lidt hjælp undervejs. Vægten har 4 forprogrammerede indstillinger til pour over, så du ikke selv skal holde styr på forholdet mellem kaffe og vand.</p>
-<p>Den har en høj kapacitet og en timer, der er tænkt til kaffe og te. Det gør den nem at bruge til begge dele: vej tebladene, start uret, og tag dem op, når tiden er gået.</p>
-<p>Er du ny med V60, Chemex eller en anden tragt, fjerner Versi meget af gætteriet de første uger. Og når du kender dine egne opskrifter, kan du stadig bruge den som en almindelig vægt med timer.</p>
-HTML,
-			'good'    => [ 'Pour over-begyndere', 'Kaffe og te', 'Dig, der vil have hjælp til forholdet' ],
-			'less'    => [ 'Dig, der kun skal veje espresso' ],
-		],
-		[
 			'ean'     => '4006664164306',
 			'price'   => 379,
 			'name'    => 'Gefu Preziso køkkenvægt',
@@ -58,7 +44,7 @@ HTML,
 			'why'     => <<<'HTML'
 <p>Gefu Preziso er ikke en ren kaffevægt, men en køkkenvægt med tidsmåling. Den er et godt bud, hvis du vil have én vægt, der både kan veje mel til bagningen og kaffe til morgenkanden.</p>
 <p>Den vejer op til 3 kg i hele gram og viser både gram og ounce. Til filterkaffe, pour over og stempelkande er hele gram fint nok, og med tidsmålingen kan du holde øje med, hvor længe kaffen trækker.</p>
-<p>Skal du lave espresso, hvor en tiendedel gram gør en forskel, så vælg i stedet en af de to kaffevægte ovenfor. Huset i rustfrit stål og plast er nemt at tørre af, når der er spildt kaffe eller vand.</p>
+<p>Skal du lave espresso, hvor en tiendedel gram gør en forskel, så vælg i stedet kaffevægten ovenfor, der vejer i tiendedele. Huset i rustfrit stål og plast er nemt at tørre af, når der er spildt kaffe eller vand.</p>
 HTML,
 			'good'    => [ 'Filterkaffe og stempelkande', 'Én vægt til både bagning og kaffe' ],
 			'less'    => [ 'Espresso, hvor du skal veje på 0,1 g' ],

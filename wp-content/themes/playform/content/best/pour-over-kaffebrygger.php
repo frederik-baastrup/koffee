@@ -18,15 +18,16 @@ return [
 HTML,
 	'picks'    => [
 		[
-			'ean'     => '4977642730137',
-			'price'   => 125.95,
+			'ean'     => '4977642724020',
+			'eans'    => [ '4977642724020', '4977642724549', '4977642730137' ],
+			'price'   => 265,
 			'name'    => 'Hario V60 Glasdripper 02',
 			'role'    => 'Bedst samlet',
 			'reviews' => [],
-			'verdict' => 'Den klassiske kegleformede tragt i varmefast glas med aftagelig holder – enkel at bruge og nem at gøre ren.',
+			'verdict' => 'Den klassiske kegleformede tragt i varmefast glas på en holder – enkel at bruge og nem at gøre ren.',
 			'why'     => <<<'HTML'
 <p>Hario V60 er tragten, som moderne pour over er bygget op omkring. Den kegleformede tragt giver dig fuld kontrol: hælder du langsomt, trækker kaffen længere; hælder du hurtigt, bliver den lettere. Det gør V60 nem at begynde med og sjov at blive bedre til.</p>
-<p>Denne udgave er i varmefast glas med en aftagelig sort holder. Glas tager ikke smag og er nemt at holde rent, og holderen gør tragten stabil på koppen eller kanden.</p>
+<p>Tragten er i varmefast glas og sidder i en holder, der gør den stabil på koppen eller kanden. Glas tager ikke smag og er nemt at holde rent.</p>
 <p>Størrelse 02 er den mest alsidige: den passer til en enkelt kop, men også til en lille kande. Køb V60-filtre i samme størrelse, så er du i gang.</p>
 HTML,
 			'good'    => [ 'Første pour over', 'En til fire kopper', 'Dig, der vil lære teknikken' ],
