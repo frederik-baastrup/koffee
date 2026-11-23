@@ -13,7 +13,7 @@ return [
 	'more_cat' => 'pour-over',
 	'intro'    => <<<'HTML'
 <p>En V60 er en kegleformet kaffetragt fra japanske Hario, og den er blevet et fast syn på caféer og i køkkener, hvor man tager sin filterkaffe alvorligt. Du hælder selv vandet over kaffen, så du bestemmer tempoet, mængden og temperaturen. Det giver en klar kop med tydelige smagsnuancer – og en lille morgenrutine, som mange holder af.</p>
-<p>Her er vores bud på de 5 bedste V60-modeller fra de butikker, vi samarbejder med. Listen spænder fra en billig tragt i plast over keramik og metal til et sæt med kande og et fritstående stativ. Alle er i størrelse 02, som passer til de fleste husstande. Under valgene kan du læse, hvad du skal tænke over, før du køber din V60.</p>
+<p>Her er vores bud på de 5 bedste V60-modeller fra de butikker, vi samarbejder med. Listen spænder fra en billig tragt i plast over keramik, glas og metal til et sæt med et fritstående stativ. De fleste er i størrelse 02, som passer til de fleste husstande. Under valgene kan du læse, hvad du skal tænke over, før du køber din V60.</p>
 HTML,
 	'picks'    => [
 		[
@@ -45,18 +45,18 @@ HTML,
 			'less'    => [ 'Dig, der vil have en tragt, der pynter' ],
 		],
 		[
-			'ean'     => '4977642143234',
-			'price'   => 180,
-			'name'    => 'Hario V60 Kaffeserver 02 sæt',
-			'role'    => 'Bedste sæt',
+			'ean'     => '4977642143296',
+			'price'   => 124,
+			'name'    => 'Hario V60 Drip-in kaffebrygger',
+			'role'    => 'Bedst i glas',
 			'reviews' => [],
-			'verdict' => 'Et samlet V60-sæt i lys grå med serveringskande, så du kan brygge flere kopper ad gangen.',
+			'verdict' => 'V60-brygger i naturfarvet borosilikatglas, der giver klassisk pour over et let og lyst udtryk.',
 			'why'     => <<<'HTML'
-<p>Brygger du til to eller flere, er det nemmere at have en kande under tragten end at stå og skifte kopper. Dette sæt samler de dele, du skal bruge til klassisk pour over, med en kaffeserver, som kaffen drypper ned i. Så kan du skænke ved bordet, når kaffen er færdig.</p>
-<p>Et sæt er også en god idé, hvis du giver V60 i gave, eller hvis du ikke vil bruge tid på at finde dele, der passer sammen. Den lysegrå farve er en lille afveksling fra det helt hvide og sorte. Husk at købe papirfiltre i størrelse 02 med det samme.</p>
+<p>Drip-in er Harios bud på en V60, hvor glasset er i hovedrollen. Brygningen foregår på den velkendte måde: Du hælder selv vandet over kaffen og styrer tempoet. Fordi borosilikatglas er gennemsigtigt, kan du følge med i, hvordan kaffen løber igennem, og det gør morgenritualet lidt mere synligt.</p>
+<p>Glas tager ikke smag til sig og er nemt at skylle rent, så det er et godt materiale til daglig brug. Til gengæld skal det behandles med lidt omtanke i vasken. Prisen gør den til et oplagt valg, hvis du vil prøve V60 i et andet materiale end plast uden at bruge mange penge.</p>
 HTML,
-			'good'    => [ 'Morgenkaffe til to eller flere', 'En gave til den kaffeinteresserede' ],
-			'less'    => [ 'Dig, der kun brygger én kop direkte i kruset' ],
+			'good'    => [ 'Dig, der kan lide at se kaffen løbe igennem', 'Et lyst og let udtryk på køkkenbordet' ],
+			'less'    => [ 'Rejser og ture, hvor den kan blive tabt' ],
 		],
 		[
 			'ean'     => '4977642736719',

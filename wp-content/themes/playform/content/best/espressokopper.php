@@ -13,23 +13,24 @@ return [
 	'more_cat' => 'espressokopper',
 	'intro'    => <<<'HTML'
 <p>En espresso er lille, og netop derfor betyder koppen meget. En tynd, kold kop stjæler varmen fra de få centiliter kaffe på få sekunder, mens en kop med tykt gods holder espressoen varm, til du har nydt den sidste slurk. Formen spiller også ind: Den rette kop samler cremaen og duften, så du får mere ud af kaffen.</p>
-<p>Her er vores bud på de 5 bedste espressokopper fra de butikker, vi samarbejder med. Der er klassiske kopper i tykt porcelæn, dobbeltvæggede glas, dansk keramik, et farverigt sæt med underkop og et budgetvalg i håndlavet stentøj. Nederst kan du læse, hvad du skal kigge efter.</p>
+<p>Her er vores bud på de 5 bedste espressokopper fra de butikker, vi samarbejder med. Der er en tidløs designklassiker, dobbeltvæggede glas, dansk keramik, et farverigt sæt med underkop og et budgetvalg i håndlavet stentøj. Nederst kan du læse, hvad du skal kigge efter.</p>
 HTML,
 	'picks'    => [
 		[
-			'ean'     => '8720389004711',
-			'price'   => 479,
-			'name'    => 'Gaggia Espressokop hvid, 6 stk.',
+			'ean'     => '6411923690508',
+			'eans'    => [ '6411923690508', '6411923690515', '6411923690522' ],
+			'price'   => 97,
+			'name'    => 'Iittala Teema espressokop 10 cl',
 			'role'    => 'Bedst samlet',
 			'reviews' => [],
-			'verdict' => 'Seks klassiske espressokopper i tykt porcelæn, der holder espressoen varm længere – fra en italiensk espressoproducent.',
+			'verdict' => 'Tidløs espressokop på 10 cl fra Iittalas Teema-serie, tegnet af Kaj Franck med fokus på funktion.',
 			'why'     => <<<'HTML'
-<p>Gaggia er kendt for espressomaskiner, og deres kopper er lavet ud fra samme tankegang: Koppen skal hjælpe kaffen. Godset er tykt porcelæn, så koppen holder på varmen, og espressoen bevarer sin temperatur og dermed sin smag længere.</p>
-<p>Den indvendige form er afrundet, så espressoen og cremaen samles pænt i bunden af koppen. Det er den klassiske barkop, du kender fra caféerne i Italien, hvor funktion vejer tungere end pynt.</p>
-<p>Du får seks kopper i sættet, så der er nok, når der kommer gæster til middag. Det hvide porcelæn passer til ethvert service og får cremaens farve til at stå flot. Varm kopperne på espressomaskinens kopvarmer, så får du det fulde udbytte af det tykke gods.</p>
+<p>Teema er en af de serier, der aldrig rigtig går af mode. Kaj Franck gav den et enkelt og afdæmpet formsprog, hvor intet er med for pyntens skyld, og espressokoppen følger samme linje. Det gør den nem at sætte på bordet ved siden af næsten ethvert andet service.</p>
+<p>Med 10 cl er der god plads til både en enkelt og en dobbelt espresso, uden at koppen bliver så stor, at kaffen forsvinder i bunden. Fordi den sælges enkeltvis, kan du købe præcis det antal, du har brug for, og supplere senere.</p>
+<p>Varm koppen med varmt vand eller på espressomaskinens kopvarmer, før du brygger, så holder espressoen bedre på varmen. Teema-serien har også krus, hvis du vil have mere i samme stil.</p>
 HTML,
-			'good'    => [ 'Dig med espressomaskine derhjemme', 'Middage med mange gæster', 'Den klassiske barkop' ],
-			'less'    => [ 'Dig, der kun skal bruge en enkelt kop' ],
+			'good'    => [ 'Dig, der vil have en tidløs kop', 'Både enkelt og dobbelt espresso', 'Et service, der kan bygges op' ],
+			'less'    => [ 'Dig, der vil have underkop med i købet' ],
 		],
 		[
 			'ean'     => '727015530291',

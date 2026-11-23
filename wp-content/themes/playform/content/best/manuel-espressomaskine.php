@@ -9,12 +9,12 @@ return [
 	'slug'     => 'manuel-espressomaskine',
 	'date'     => '2021-10-14 10:00:00',
 	'keyword'  => 'manuel espressomaskine',
-	'title'    => 'Manuel espressomaskine: Vores bud på de 5 bedste',
-	'excerpt'  => 'Med en manuel espressomaskine skaber du selv trykket – med et håndtag i køkkenet eller en lille pumpe på turen. Her er vores bud på de 5 bedste manuelle espressomaskiner.',
+	'title'    => 'Manuel espressomaskine: Vores bud på de 4 bedste',
+	'excerpt'  => 'Med en manuel espressomaskine skaber du selv trykket – med et håndtag i køkkenet eller en lille pumpe på turen. Her er vores bud på de 4 bedste manuelle espressomaskiner.',
 	'more_cat' => 'manuel-espressomaskine',
 	'intro'    => <<<'HTML'
 <p>En manuel espressomaskine er espresso skåret helt ind til benet. Der er ingen elektrisk pumpe, der klarer trykket for dig: du presser selv vandet gennem kaffen med et håndtag eller en lille håndpumpe. Det giver en helt særlig føling med kaffen og en ro over morgenkoppen, som mange kaffeelskere ikke vil bytte for noget.</p>
-<p>Der er to slags. De klassiske håndtagsmaskiner står på køkkenbordet og er smukke stykker håndværk. De håndholdte er små og kører helt uden strøm, så de kan komme med i rygsækken. Herunder er vores bud på de 5 bedste fra de butikker, vi samarbejder med – og nederst en guide til, hvad du skal tænke over.</p>
+<p>Der er to slags. De klassiske håndtagsmaskiner står på køkkenbordet og er smukke stykker håndværk. De håndholdte er små og kører helt uden strøm, så de kan komme med i rygsækken. Herunder er vores bud på de 4 bedste fra de butikker, vi samarbejder med – og nederst en guide til, hvad du skal tænke over.</p>
 HTML,
 	'picks'    => [
 		[
@@ -30,20 +30,6 @@ HTML,
 HTML,
 			'good'    => [ 'Dig, der vil have det klassiske håndværk', 'Et køkken, hvor maskinen må ses', 'Et par kopper ad gangen' ],
 			'less'    => [ 'Mange gæster på én gang', 'Dig, der vil have det hurtigt og nemt' ],
-		],
-		[
-			'ean'     => '8010072228099',
-			'price'   => 9229,
-			'name'    => 'La Pavoni Professional 1,6 liter',
-			'role'    => 'Til flere kopper',
-			'reviews' => [],
-			'verdict' => 'Den større La Pavoni med 1,6 liters vandtank, 950 watt og dampfunktion – i kobber med detaljer i guld.',
-			'why'     => <<<'HTML'
-<p>La Pavoni Professional bygger på samme idé som Europiccola, men i et større format. Vandtanken rummer 1,6 liter, så du kan lave flere kopper, inden du skal fylde op. Det er rart, når der er gæster, eller når hele familien vil have kaffe.</p>
-<p>Maskinen har 950 watt og en praktisk dampfunktion til mælken. Denne udgave er i kobber med detaljer i guld, og den er lavet til at stå fremme som et smykke i køkkenet. Den kræver lige så meget håndelag som den mindre model, men giver dig mere luft til at lave en runde til alle.</p>
-HTML,
-			'good'    => [ 'Flere kopper ad gangen', 'Gæster og weekendbrunch', 'Et køkken med plads til et smykke' ],
-			'less'    => [ 'Lavt budget', 'Et minimalistisk køkken' ],
 		],
 		[
 			'ean'     => '8010072228181',

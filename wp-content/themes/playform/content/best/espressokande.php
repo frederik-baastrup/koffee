@@ -18,16 +18,17 @@ return [
 HTML,
 	'picks'    => [
 		[
-			'ean'     => '8006363011631',
-			'price'   => 315,
-			'name'    => 'Bialetti Moka Express 6 kopper',
+			'ean'     => '8006363011655',
+			'eans'    => [ '8006363011655', '8006363011631' ],
+			'price'   => 529,
+			'name'    => 'Bialetti Moka Express 9 kopper',
 			'role'    => 'Bedst samlet',
 			'reviews' => [],
 			'verdict' => 'Den ottekantede klassiker, der brygger med damp, tryk og varme – nem at bruge og nok til hele morgenbordet.',
 			'why'     => <<<'HTML'
 <p>Bialetti Moka Express er kanden, de fleste ser for sig, når de hører ordet espressokande. Den ottekantede form har været en del af italienske køkkener i generationer, og princippet er stadig det samme: vand i bunden, kaffe i tragten, toppen på – og så klarer damp, tryk og varme resten.</p>
-<p>Størrelsen til 6 kopper er god, når I er flere, eller når du vil lave kaffe til en cappuccino med opskummet mælk. Husk, at en "kop" i en espressokande er en lille espressokop, ikke et krus.</p>
-<p>Den er enkel, billig og nem at få reservedele til. Har du gas eller en almindelig kogeplade, er det her det sikre valg.</p>
+<p>Størrelsen til 9 kopper er god, når I er flere ved morgenbordet, eller når der skal kaffe til et par cappuccinoer med opskummet mælk. Brygger du mest til dig selv, er en mindre kande et bedre valg, for en espressokande fungerer bedst, når den er fyldt. Husk, at en "kop" i en espressokande er en lille espressokop, ikke et krus.</p>
+<p>Den er enkel og nem at få reservedele til. Har du gas eller en almindelig kogeplade, er det her det sikre valg.</p>
 HTML,
 			'good'    => [ 'Dig, der vil have originalen', 'Flere kopper ad gangen', 'Gas og almindelige kogeplader' ],
 			'less'    => [ 'Induktion uden adapterplade' ],

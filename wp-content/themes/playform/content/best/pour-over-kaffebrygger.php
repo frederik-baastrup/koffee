@@ -14,7 +14,7 @@ return [
 	'more_cat' => 'pour-over',
 	'intro'    => <<<'HTML'
 <p>Pour over er filterkaffe, hvor du selv er maskinen. Du hælder varmt vand over den malede kaffe i en tragt, og kaffen løber langsomt gennem filteret og ned i kanden eller koppen. Det tager et par minutter, men du bestemmer selv tempoet, temperaturen og mængden – og det kan smages. Kaffen bliver ren og klar, og du får lov at opleve, hvordan to slags bønner virkelig smager forskelligt.</p>
-<p>Udstyret er billigt, og det fylder næsten ingenting. Herunder er vores bud på de 5 bedste pour over kaffebryggere fra de butikker, vi samarbejder med: klassiske tragte, en kande i ét stykke, en, der slipper for papirfiltre, og en til turen. Nederst kan du læse, hvordan du kommer godt i gang.</p>
+<p>Udstyret er billigt, og det fylder næsten ingenting. Herunder er vores bud på de 5 bedste pour over kaffebryggere fra de butikker, vi samarbejder med: en klassisk tragt, en tragt til ét enkelt hæld, en kande i ét stykke, en, der slipper for papirfiltre, og en til turen. Nederst kan du læse, hvordan du kommer godt i gang.</p>
 HTML,
 	'picks'    => [
 		[
@@ -49,19 +49,19 @@ HTML,
 			'less'    => [ 'Kun én kop ad gangen' ],
 		],
 		[
-			'ean'     => '4977642728172',
-			'price'   => 394.95,
-			'name'    => 'Hario V60 Switch sæt 02',
+			'ean'     => '4977642031326',
+			'price'   => 105,
+			'name'    => 'Hario V60 Mugen keramik',
 			'role'    => 'Nemmest at ramme',
 			'reviews' => [],
-			'verdict' => 'Tragt med ventil, der kombinerer pour over med fuld udtrækning – sælges som sæt med kande.',
+			'verdict' => 'V60-tragt i hvid keramik, der er bygget til at blive brygget med ét enkelt hæld i stedet for flere runder.',
 			'why'     => <<<'HTML'
-<p>Hario Switch er til dig, der kan lide pour over, men gerne vil have et mere ens resultat uden at øve teknikken. Tragten har en ventil i bunden. Når den er lukket, trækker kaffen i vandet som i en stempelkande; når du åbner, løber kaffen igennem filteret som i en almindelig V60.</p>
-<p>Det giver dig en dybere udtrækning og mere kontrol over smagsprofilen, og du behøver ikke stå og hælde i et bestemt tempo. Du kan også lade ventilen stå åben og bruge den som en helt almindelig V60.</p>
-<p>Sættet kommer med kande, så du har det hele fra start. Det er et godt valg, hvis du vil have pour over-kaffe på hverdage uden at gøre det til en sport.</p>
+<p>Mugen er til dig, der kan lide pour over-kaffe, men ikke vil stå og hælde i små portioner med et ur ved siden af. Hvor den klassiske V60 lægger op til, at du hælder vandet på i flere omgange, er Mugen formet til, at du hælder det hele på én gang. Det fjerner meget af den usikkerhed, der gør, at to kopper smager forskelligt.</p>
+<p>Du får en klar kop med fylde for mindre arbejde, og det gør den velegnet til travle hverdagsmorgener. Tragten er i hvid keramik, så husk at skylle den med varmt vand, før du brygger, så den ikke stjæler varmen fra kaffen.</p>
+<p>Den er et godt valg, hvis du har prøvet en almindelig V60 og synes, at teknikken fylder for meget – eller hvis du vil starte med pour over på den nemme måde.</p>
 HTML,
-			'good'    => [ 'Hverdagsbrygning', 'Dig, der vil have samme smag hver gang', 'To metoder i én tragt' ],
-			'less'    => [ 'Dig, der allerede har en V60 og bare vil hælde' ],
+			'good'    => [ 'Hverdagsbrygning', 'Dig, der vil have samme smag hver gang', 'Begyndere i pour over' ],
+			'less'    => [ 'Dig, der kan lide at styre hvert hæld selv' ],
 		],
 		[
 			'ean'     => '699965336820',

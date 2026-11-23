@@ -13,7 +13,7 @@ return [
 	'more_cat' => 'kaffekvaerne',
 	'intro'    => <<<'HTML'
 <p>Kaffe begynder at miste sin aroma kort efter, at bønnerne er malet. Derfor gør en kaffekværn ofte en større forskel for smagen end en ny kaffemaskine. Når du maler lige før brygningen, får du hele duften med i koppen – og du kan selv bestemme, hvor fint kaffen skal males til netop din bryggemetode.</p>
-<p>Her er vores bud på de 5 bedste kaffekværne fra de butikker, vi samarbejder med. Listen spænder bredt: en alsidig elektrisk kværn med display, et prisvenligt valg til hverdagen, en nem kværn til nybegynderen, en flagskibsmodel i flot design og en klassisk håndkværn. Nederst får du vores råd til, hvordan du vælger den rigtige kaffekværn.</p>
+<p>Her er vores bud på de 5 bedste kaffekværne fra de butikker, vi samarbejder med. Listen spænder bredt: en alsidig elektrisk kværn med display, et prisvenligt valg til hverdagen, en nem kværn til nybegynderen, en flagskibsmodel i flot design og en håndkværn til stille morgener og tur. Nederst får du vores råd til, hvordan du vælger den rigtige kaffekværn.</p>
 HTML,
 	'picks'    => [
 		[
@@ -59,29 +59,30 @@ HTML,
 			'less'    => [ 'Den erfarne hjemmebarista' ],
 		],
 		[
-			'ean'     => '8712072495111',
-			'price'   => 2499,
+			'ean'     => '8712072495128',
+			'eans'    => [ '8712072495128', '8712072495104', '8712072495111' ],
+			'price'   => 1899,
 			'name'    => 'Moccamaster KM5 Burr',
 			'role'    => 'Designvalget',
 			'reviews' => [],
 			'verdict' => 'Håndlavet flagskibskværn fra Moccamaster, helt redesignet og med et stærkt, genkendeligt udtryk.',
 			'why'     => <<<'HTML'
 <p>Moccamaster KM5 Burr er den nyeste kværn i Moccamaster-familien og mærkets flagskib. Den er håndlavet, og designet er gjort helt om, så den passer til den kendte stil, mange forbinder med mærkets kaffemaskiner.</p>
-<p>Har du allerede en Moccamaster på køkkenbordet, er KM5 Burr den naturlige makker, der får de to til at se ud som et sæt. Den fås i mat sort, mat hvid og poleret sølv, så du kan matche din maskine eller dit køkken. Det er en investering, men du får en kværn, der er bygget til at stå fremme i mange år.</p>
+<p>Har du allerede en Moccamaster på køkkenbordet, er KM5 Burr den naturlige makker, der får de to til at se ud som et sæt. Den fås i flere farver, så du kan matche din maskine eller dit køkken. Det er en investering, men du får en kværn, der er bygget til at stå fremme i mange år.</p>
 HTML,
 			'good'    => [ 'Dig, der har en Moccamaster', 'Køkkener, hvor designet tæller' ],
 			'less'    => [ 'Det stramme budget' ],
 		],
 		[
-			'ean'     => '4006950042349',
-			'price'   => 480,
-			'name'    => 'Peugeot Presto 18 cm',
+			'ean'     => '0719812001807',
+			'price'   => 470,
+			'name'    => 'Oxo Brew manuel kaffekværn',
 			'role'    => 'Bedste håndkværn',
 			'reviews' => [],
-			'verdict' => 'Manuel kaffekværn med Peugeots u’Select-system og seks forudindstillede formalinger.',
+			'verdict' => 'Manuel kaffekværn fra Oxo, lavet til at give friskmalet kaffe med præcision – også væk fra køkkenet.',
 			'why'     => <<<'HTML'
-<p>Peugeot Presto er en manuel kaffekværn til dig, der kan lide at have fuld kontrol over kaffen. Med det patenterede u’Select-system vælger du nemt mellem seks forudindstillede formalinger, så du ikke skal gætte dig frem, når du skifter bryggemetode.</p>
-<p>En håndkværn larmer ikke, kræver ingen stikkontakt og er nem at tage med i sommerhuset. Den er 18 cm høj og passer til dig, der brygger en eller to kopper ad gangen og nyder det lille ritual, det er at male bønnerne selv.</p>
+<p>Oxo Brew er en håndkværn til dig, der godt kan lide at styre kaffen selv og ikke har brug for strøm til det. Den er bygget med fokus på præcision, så du kan male bønnerne til den bryggemetode, du bruger den dag.</p>
+<p>Fordi den ikke skal sættes i en stikkontakt, er den let at have med i sommerhuset, på kontoret eller på tur. En håndkværn larmer heller ikke, så den passer godt til dig, der brygger en eller to kopper ad gangen og nyder den lille pause, det er at male bønnerne.</p>
 HTML,
 			'good'    => [ 'Stille morgener', 'Små mængder og kaffe på farten' ],
 			'less'    => [ 'Dig, der brygger store kander hver dag' ],

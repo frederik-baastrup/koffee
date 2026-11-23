@@ -78,19 +78,19 @@ HTML,
 			'less'    => [ 'Dig, der vil male bønnerne i maskinen' ],
 		],
 		[
-			'ean'     => '4008146047572',
-			'price'   => 525,
-			'name'    => 'Severin KA 9343',
+			'ean'     => '4006508220113',
+			'price'   => 515,
+			'name'    => 'Melitta Easy Therm 2.0',
 			'role'    => 'Bedst til prisen',
 			'reviews' => [],
-			'verdict' => 'Prisvenlig kaffemaskine med termokande i rustfrit stål – til køkkenet, kontoret eller haven.',
+			'verdict' => 'Prisvenlig filterkaffemaskine, der brygger 8 kopper direkte i en termokande og slukker af sig selv efter 15 minutter.',
 			'why'     => <<<'HTML'
-<p>Du behøver ikke bruge en formue for at slippe af med den brændte smag fra varmepladen. Severin KA 9343 er det billigste bud i vores udvalg og brygger direkte i en termokande i rustfrit stål.</p>
-<p>Den er tænkt til at blive brugt mange steder: i køkkenet derhjemme, på kontoret eller med kanden ude i haven en sommermorgen.</p>
-<p>Vælg den, hvis du vil prøve, hvad en termokande gør for din kaffe, uden at gå på kompromis med budgettet. Se også vores guide til <a href="/billig-kaffemaskine/">billig kaffemaskine</a> for flere prisvenlige valg.</p>
+<p>Det koster ikke meget at slippe af med varmepladen og den brændte bismag. Melitta Easy Therm 2.0 er det billigste bud i vores udvalg, og den brygger kaffen direkte ned i en termokande, så den holder sig varm, efter at maskinen er færdig.</p>
+<p>Der er plads til 8 kopper, hvilket passer fint til en husstand på to eller tre, eller til en formiddag ved skrivebordet. Maskinen slukker selv efter 15 minutter, så du ikke skal løbe tilbage og tjekke, om den stadig er tændt.</p>
+<p>Vælg den, hvis du vil mærke, hvad en termokande gør for kaffen, uden at det tager hårdt på budgettet. Se også vores guide til <a href="/billig-kaffemaskine/">billig kaffemaskine</a> for flere prisvenlige valg.</p>
 HTML,
-			'good'    => [ 'Det stramme budget', 'Sommerhuset eller kontoret', 'Dit første skifte til termokande' ],
-			'less'    => [ 'Dig, der vil finjustere smagen' ],
+			'good'    => [ 'Det stramme budget', 'To til tre kaffedrikkere', 'Dit første skifte til termokande' ],
+			'less'    => [ 'Dig, der vil finjustere smagen', 'Store familier og mange gæster' ],
 		],
 	],
 	'guide'    => <<<'HTML'

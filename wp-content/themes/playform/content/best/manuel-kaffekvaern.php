@@ -63,14 +63,15 @@ HTML,
 			'less'    => [ 'Dig, der mest vil have kværnen som pynt i køkkenet' ],
 		],
 		[
-			'ean'     => '4006528040012',
-			'price'   => 979,
+			'ean'     => '4006528040005',
+			'eans'    => [ '4006528040005', '4006528040029', '4006528040012' ],
+			'price'   => 866,
 			'name'    => 'Zassenhaus Brasilia',
 			'role'    => 'Bedst design',
 			'reviews' => [],
-			'verdict' => 'Klassisk kaffemølle i mørkbejdset bøg fra en af de mest kendte kværnproducenter.',
+			'verdict' => 'Klassisk kaffemølle i træ fra en af de mest kendte kværnproducenter – nem at indstille fra fin til grov.',
 			'why'     => <<<'HTML'
-<p>Zassenhaus Brasilia er kaffemøllen, der får lov at stå fremme. Den er lavet i mørkbejdset bøg i den klassiske stil, mange kender fra deres bedsteforældres køkken, og den giver køkkenbordet et varmt, gammeldags præg.</p>
+<p>Zassenhaus Brasilia er kaffemøllen, der får lov at stå fremme. Den er lavet i træ i den klassiske stil, mange kender fra deres bedsteforældres køkken, og den giver køkkenbordet et varmt, gammeldags præg.</p>
 <p>Zassenhaus er et tysk mærke og regnes blandt de førende producenter af kværne. Møllen er ikke kun pynt: du maler dine bønner friske, lige før du brygger, og får hele aromaen med i koppen.</p>
 <p>Den er et godt valg til dig, der laver filterkaffe eller stempelkande i ro og mag og sætter pris på ting, der er smukke at bruge. Den er også en oplagt gave til kaffeelskeren.</p>
 HTML,

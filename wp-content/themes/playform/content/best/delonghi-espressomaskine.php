@@ -17,15 +17,15 @@ return [
 HTML,
 	'picks'    => [
 		[
-			'ean'     => '8004399021372',
-			'price'   => 3019,
-			'name'    => "De'Longhi Magnifica Evo ECAM290.31",
+			'ean'     => '8004399021419',
+			'price'   => 2899,
+			'name'    => "De'Longhi Magnifica Evo ECAM290.81",
 			'role'    => 'Bedst samlet',
 			'reviews' => [],
-			'verdict' => 'Fuldautomatisk De\'Longhi, hvor du vælger mellem fem kaffedrikke med et enkelt tryk.',
+			'verdict' => 'Fuldautomatisk Magnifica Evo, hvor du hurtigt vælger mellem syv forskellige valg til koppen.',
 			'why'     => <<<'HTML'
-<p>Magnifica Evo er det mest oplagte sted at starte, hvis du vil have frisk espresso uden at skulle lære at dosere og tampe. Maskinen er fuldautomatisk, så den maler bønnerne, brygger og skyller selv. Du vælger blot mellem fem kaffedrikke, og så går det af sig selv.</p>
-<p>Den rammer et sundt leje i serien: Du får friskmalet kaffe hver gang og en betjening, hele husstanden kan finde ud af, uden at prisen løber løbsk. Er du i tvivl om, hvilken De'Longhi du skal vælge, er det svært at ramme forbi med denne.</p>
+<p>Magnifica Evo ECAM290.81 er et godt udgangspunkt, hvis du vil have espresso med friskmalede bønner uden at skulle dosere og tampe selv. Som fuldautomat klarer den både kværning og brygning, og du kommer hurtigt i gang med de syv forskellige valg, maskinen giver dig.</p>
+<p>Den ligger midt i De'Longhis udvalg af fuldautomater: mere udstyret end de helt enkle modeller, men uden at prisen stikker af. Det gør den til et sikkert valg til en husstand, hvor flere skal kunne lave deres kaffe uden en lang introduktion.</p>
 HTML,
 			'good'    => [ 'Dig, der vil have kaffe uden besvær', 'Husstande med flere kaffedrikkere' ],
 			'less'    => [ 'Dig, der selv vil styre hvert shot' ],
