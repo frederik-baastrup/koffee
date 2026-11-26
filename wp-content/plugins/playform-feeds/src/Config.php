@@ -179,6 +179,7 @@ final class Config {
 			'salt ?(og|&) ?peber|saltkværn|peberkværn|krydderikværn|krydderimølle|muskatnød',
 			'tekande|te ?kande|teæg|tebrygger|matcha|te ?si\b|tesi\b|cold ?brew te\b|\bbrev ?te\b',
 			'espresso ?martini|cocktail|shaker|vinglas|ølglas|moscow ?mule|tevarmer|bottle ?pilot|vaskemaskine|opvaskemaskine|hakker til|kødhakker|flaskerens|til flasker?\b|doseringstragt|dosertragt|flaskeholder|låg til|coravin|vitamix|krydderiblanding|krydderi\b|vandflaske|drikkeflaske|mini shot|shot ?krus|skænkeprop|hældetud|\bpourer\b|doseringsmål|\bjigger\b|spiritus|whisky|gin ?glas',
+			'champagneglas|hvidvinsglas|rødvinsglas|snapseglas|tumbler|popcorn|vaske-tørre|vasketørre|tørretumbler|køkkenvægt|middagstallerken|dyb tallerken|frokosttallerken',
 			'gulvtæppe|\btæppe|plaid|forklæde|viskestykke|\bt-shirt\b|hættetrøje|kasket',
 		];
 	}
